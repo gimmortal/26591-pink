@@ -1,8 +1,201 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Form Academy: pink</title>
+<html lang="en">
 
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Форма Pink</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="b1_page_form">
+            <div class="b1_page_form_top">
+                <div class="top">
+                    <img css="logo" src="img/logo.png" alt="Логотип Pink">
+                    <nav class="top_menu">
+                        <ul class="top_menu_navigation">
+                            <li class="top_menu_navigation__item">Информация</li>
+                            <li class="top_menu_navigation__item">Блог</li>
+                            <li class="top_menu_navigation__item">Отзывы</li>
+                            <li class="top_menu_navigation__item">Конкурс</li>
+                        </ul>
+                    </nav>
+                </div>
+                <h1 class="b1_page_form_top__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+            </div>
+            <div class="b1_page_form_bottom">
+                <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+                <form action="/echo" method="post">
+                    <label>
+                        Имя:*
+                        <br>
+                        <input type="text" name="name" id="name_field" placeholder="Введите ваше имя">
+                    </label>
+                    <label>
+                        Фамилия:*
+                        <br>
+                        <input type="text" name="family" id="family_field" placeholder="Укажите фамилию">
+                    </label>
+                    <label>
+                        Отчество:*
+                        <br>
+                        <input type="text" name="surname" id="surname_field" placeholder="Ну и отчество тоже">
+                    </label>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="b2_page_form">
+            <div class="b2_page_form_apptravel">
+                <h3 class="form__title">С каким приложением путешествовали? *</h3>
+                <form class="apptravel_radio" action="#" method="post">
+                    <input id="ios" type="radio" name="ios_radio" value="ios" checked="">
+                    <label class="apptravel_radio__libel" for="ios">Pink для iOS</label>
+                    <br>
+                    <input id="android" type="radio" name="android_radio" value="android">
+                    <label class="apptravel_radio__libel" for="android">Pink на Android</label>
+                    <br>
+                    <input id="windows" type="radio" name="windows_radio" value="windows">
+                    <label class="apptravel_radio__libel" for="windows">Windows Phone</label>
+                </form>
+            </div>
+            <div class="b2_page_form_travel">
+                <h3 class="form__title">Когда вы путешествовали? *</h3>
+                <form action="/echo" method="post">
+                    <label>
+                        <input type="date" name="travel__date_departure" value="date">
+                        <br>
+                        <h3 class="form__title">Дата выезда</h3>
+                    </label>
+                    <input type="button" name="travel__plus" value="+">
+                    <input type="text" name="traveel__continuance">
+                    <input type="button" name="travel__minus" value="-">
+                    <h3 class="form__title">Продолжительность</h3>
+                    <label>
+                        <input type="date" name="travel__date_return" value="date">
+                        <br>
+                        <h3 class="form__title">Дата возвращение</h3>
+                    </label>
+                </form>
+            </div>
+            <div class="b2_page_form_travel_people">
+                <h3 class="form__title">Количество попутчиков</h3>
+                <form action="/echo" method="post">
+                    <input type="button" name="travel_people__plus" value="+">
+                    <input type="text" name="travel_people__continuance">
+                    <input type="button" name="travel_people__minus" value="-">
+                    <hr>
+                    <table class="travel_people_1">
+                        <tr>
+                            <h3 class="form__title"><th>№</th>
+														<th>Имя:*</th></h3>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <input type="text" name="travel_people__name" placeholder="Введите ваше имя">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <h3 class="form__title"><td>Прозвище</td></h3>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="text" name="travel_people__nickname" placeholder="Ну как же без этого!">
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="travel_people_2">
+                        <tr>
+                            <h3 class="form__title"><th>№</th>
+														<th>Имя:*</th></h3>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <input type="text" name="travel_people__name" placeholder="Введите ваше имя">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <h3 class="form__title"><td>Прозвище</td></h3>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="text" name="travel_people__nickname" placeholder="Ну как же без этого!">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="b3_page_form">
+            <div class="b3_page_form_achievements">
+                <h3 class="form__title">Ваши безбашенные достижения в путешествии</h3>
+                <form action="/echo" method="post">
+                    <input id="selfie" type="checkbox" name="selfie" value="selfie" checked="">
+                    <label for="selfie">Сделал селфи с акулой</label>
+                    <br>
+                    <input id="burned" type="checkbox" name="burned" value="burned" checked="">
+                    <label for="burned">Обгорел на пляже</label>
+                    <br>
+                    <input id="Chuck" type="checkbox" name="Chuck" value="Chuck">
+                    <label for="Chuck">Видел Чака Норриса</label>
+                    <br>
+                    <input id="souvenirs" type="checkbox" name="souvenirs" value="souvenirs">
+                    <label for="souvenirs">Накупил сувениров</label>
+                    <br>
+                    <input id="tower" type="checkbox" name="tower" value="tower" checked="">
+                    <label for="tower">Удержал башню</label>
+                    <br>
+                    <input id="hotel" type="checkbox" name="hotel" value="hotel">
+                    <label for="hotel">Разгромил отель</label>
+                    <br>
+                </form>
+            </div>
+            <div class="b3_page_form_photo">
+                <h3 class="form__title">Ваши фотографии из поездки *</h3>
+                <a class="b3_page_form_photo__link" href="#">Загрузить фото</a>
+                <hr>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+            <div class="b3_page_form_send">
+                <a href="#">Отправить форму</a>
+                <p><span>*</span>- обязательные поля</p>
+            </div>
+        </div>
+    </header>
+    <!-- FOOTER -->
+    <footer>
+        <img src="img/logo_bottom.png" height="40" width="145" alt="">
+        <div class="footer_social">
+            <div class="footer_social_box">
+                <div class="footer_social_box__link--twitter"></div>
+                <a href="http://twitter.com" class="footer-social-box__link"></a>
+            </div>
+            <div class="footer_social_box">
+                <div class="footer_social_box__link--facebook"></div>
+                <a href="http://facebook.com" class="footer-social-box__link"></a>
+            </div>
+            <div class="footer_social_box">
+                <div class="footer_social_box__link--vector"></div>
+                <a href="http://vector.com" class="footer-social-box__link"></a>
+            </div>
+        </div>
+        <p>Разработано</p> <img src="img/logo_html_academy.png" alt="Разработчик HTML Academy">
+    </footer>
+</body>
+
 </html>
