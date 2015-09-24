@@ -1,120 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Pink_index</title>
+  <meta charset="UTF-8">
+  <title>Pink</title>
 </head>
 
 <body>
-    <header>
-        <div class="block1-page-index">
-            <div class="block1-page-index-top">
-            <div class="top">
-                <img css="logo" src="img/logo.png" alt="Логотип Pink">
-                <nav class="top-menu">
-                    <ul class="top-menu-navigation">
-                        <li class="top-menu-navigation__item">Информация</li>
-                        <li class="top-menu-navigation__item">Блог</li>
-                        <li class="top-menu-navigation__item">Отзывы</li>
-                        <li class="top-menu-navigation__item">Конкурс</li>
-                    </ul>
-                </nav>
-                 </div>
-                <h1 class="block1-page-index-top__title">Взгляните на жизнь иначе!</h1>
-             </div>
-            <div class="block1-page-index-bottom">
-                <a href="#">Скачать приложение</a>
-                <ul class="platform">
-                    <li class="platform__item"><img src="img/item_apple.png" height="57" width="46" alt=""></li>
-                    <li class="platform__item"><img src="img/item_android.png" height="47" width="42" alt=""></li>
-                    <li class="platform__item"><img src="img/item_windows.png" height="42" width="44" alt=""></li>
-                </ul>
-                <p class="platform__description">Доступно для iPhone, iPad, Android,
-                    <br> Windows Phone, OS X, Windows 8</p>
-            </div>
-        </div>
-        <div class="block2-page-index">
-            <h2 class="block2-page-index__title">Устали от серости мегаполиса?<br>
-Нам есть, что вам предложить!</h2>
-            <div class="block2-page-index-preeminence">
-                <h3 class="block2-page-index-preeminence__title">Поднимает настроение</h3>
-                <p class="block2-page-index-preeminence__description">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-                <h3 class="block2-page-index-preeminence__title">Меняет мир вокруг</h3>
-                <p class="block2-page-index-preeminence__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-                <h3 class="block2-page-index-preeminence__title">Заводит новых друзей</h3>
-                <p class="block2-page-index-preeminence__description">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-                <img class="block2-page-index-preeminence__img" src="" alt="Телефон">
-            </div>
+<header class="page-header">
+  <div class="page-header-menu">
+    <div class="page-header-menu__logo-wrap">
+      <a class="page-header-menu__logo-link" href="/">
+        <img src="img/logo.png" alt="Pink" />
+      </a>
+    </div>
+    <div class="page-header-menu__nav-wrap">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="">Информация</a></li>
+          <li class="main-nav__item"><a href="">Блог</a></li>
+          <li class="main-nav__item"><a href="">Отзывы</a></li>
+          <li class="main-nav__item"><a href="">Конкурс</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <h1 class="page-header__title">Взгляните на жизнь иначе!</h1>
+</header>
+<main class="page-main">
+  <div class="page-main-download">
+    <div class="page-main-download__btn">
+      <a class="page-main-download__btn-link" href="/">Скачать приложение</a>
+    </div>
+    <ul class="page-main-download__list">
+      <li class="page-main-download__item"><img src="img/item_apple.png" height="57" width="46" alt=""></li>
+      <li class="page-main-download__item"><img src="img/item_android.png" height="47" width="42" alt=""></li>
+      <li class="page-main-download__item"><img src="img/item_windows.png" height="42" width="44" alt=""></li>
+    </ul>
+    <p class="page-main-download__description">
+      Доступно для iPhone, iPad, Android,
+      <br> Windows Phone, OS X, Windows 8
+    </p>
+  </div>
+  <section class="page-main-post">
+    <h2 class="page-main-post__header">
+      Устали от серости мегаполиса?<br>
+      Нам есть, что вам предложить!
+    </h2>
+    <article class="page-main-post__container">
+      <section class="page-main-post__item">
+        <h3 class="page-main-post__title">Поднимет настроение</h3>
+        <p class="" page-main-post__description ">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+      </section>
+      <section class="page-main-post__item ">
+        <h3 class="page-main-post__title ">Меняем мир вокруг</h3>
+        <p class=" "page-main-post__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      </section>
+      <section class="page-main-post__item">
+        <h3 class="page-main-post__title">Заводит новых друзей</h3>
+        <p class="" page-main-post__description ">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+      </section>
+    </article>
+  </section>
+  <div class="page-main-slider-reviews ">
+    <article class="page-main-slider-reviews__item ">
+      <h3 class="page-main-slider-reviews__header ">Николай Петров</h3>
+      <div class="page-main-slider-reviews__text ">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
+    </article>
+    <article class="page-main-slider-reviews__item ">...</article>
+    <article class="page-main-slider-reviews__item ">...</article>
+    <div class="page-main-slider-reviews__pagination ">
+      <span class="page-main-slider-reviews__pagination-item-active "></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <section class="page-main-price ">
+    <table class="price__table ">
+      <tr>
+        <th></th>
+        <th colspan="2 ">Стандарт
+          <br>3.99 USD
+          <div class="price__img "></div>
+          <p class="price__text "></p>
+        </th>
+        <th></th>
+      </tr>
+      <tr>
+        <td class="price__table-col-1 "></td>
+        <td class="price__table-col-2 ">Розовый фильтр</td>
+        <td class="price__table-col-3 "><img src="img/yes.png " height="22 " width="29 " alt=" "></td>
+        <td class="price__table-col-4 "></td>
+      </tr>
+      <tr>
+        <td class="price__table-col-1 "></td>
+        <td class="price__table-col-2 ">Смайлики</td>
+        <td class="price__table-col-3 "><img src="img/yes.png " height="22 " width="29 " alt=" "></td>
+        <td class="price__table-col-4 "></td>
+      </tr>
+      <tr>
+        <td class="price__table-col-1 "></td>
+        <td class="price__table-col-2 ">Комментарии</td>
+        <td class="price__table-col-3 "><img src="img/no.png " height="22 " width="29 " alt=" "></td>
+        <td class="price__table-col-4 "></td>
+      </tr>
+    </table>
+    <div class="page-main-price__pagination ">
+      <span></span>
+      <span class="page-main-price__pagination-table-active "></span>
+      <span></span>
+    </div>
+  </section>
+</main>
 
-        </div>
-        <div class="block3-page-index">
-            <div class="block3-page-index-slides-reviews">
-                <cite>Николай Петров</cite>
-                <blockquote>
-                    «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-                </blockquote>
-                <a href="#" class="block3-page-index-slides-reviews__item"></a>
-                <a href="#" class="block3-page-index-slides-reviews__item"></a>
-                <a href="#" class="block3-page-index-slides-reviews__item"></a>
-            </div>
-            <div class="block3-page-index-slides-prices">
-                <table>
-                    <tr>
-                        <th></th>
-                        <th colspan="2">Стандарт
-                            <br>3.99 USD
-                            <div class="prices-item__img"></div>
-                            <p class="prices-item__text"></p>
-                        </th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Розовый фильтр</td>
-                        <td><img src="img/yes.png" height="22" width="29" alt=""></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Смайлики</td>
-                        <td><img src="img/yes.png" height="22" width="29" alt=""></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Комментарии</td>
-                        <td><img src="img/no.png" height="22" width="29" alt=""></td>
-                        <td></td>
-                    </tr>
-                </table>
-                <a href="#" class="block3-page-index-slides-prices__item"></a>
-                <a href="#" class="block3-page-index-slides-prices__item"></a>
-                <a href="#" class="block3-page-index-slides-prices__item"></a>
-            </div>
-        </div>
-    </header>
-    <footer>
-        <div class="footer-top">
-            <h2>Остались вопросы?<br>
-Свяжитесь с нами!</h2>
-            <h3 class="footer-top__title">Звоните:</h3>
-            <p class="footer-top__text">
-                +7(812)555-66-66
-            </p>
-            <h3 class="footer-top__title">Пишите:</h3>
-            <p class="footer-top__text">
-                mail@htmlacademy.ru
-            </p>
-            <h3 class="footer-top__title">Приезжайте в гости:</h3>
-            <p class="footer-top__text">
-                ул.Большая
-                <br> Конюшенная, 19/8
-            </p>
-        </div>
-        <div class="footer-bottom">
+<footer class="page-footer ">
+  <h2 class="page-footer__header ">Остались вопросы?<br>
+    Свяжитесь с нами!</h2>
+  <h3 class="page-footer__title ">Звоните:</h3>
+  <p class="page-footer__text ">
+    +7(812)555-66-66
+  </p>
+  <h3 class="page-footer__title ">Пишите:</h3>
+  <p class="page-footer__text ">
+    mail@htmlacademy.ru
+  </p>
+  <h3 class="page-footer__title ">Приезжайте в гости:</h3>
+  <p class="page-footer__text ">
+    ул.Большая
+    <br> Конюшенная, 19/8
+  </p>
+  <div class="page-footer__map ">
 
-        </div>
-    </footer>
+  </div>
+</footer>
 </body>
-
 </html>
