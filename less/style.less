@@ -2,6 +2,9 @@
 @bg_block:    #f2f2f2;
 @color:       #000;
 @dir:         "../img";
+@bold:        OpenSansBold;
+@light:       OpenSansLightRegular;
+@OpenSansRegular: regular;
 
 // Обычное использование
 
@@ -132,13 +135,13 @@ body{
   width: 320px;
 }
 h1, h2 {
-  font-family: OpenSansLightRegular;
+  font-family: @light;
   font-size: 24px;
   text-align: center;
 }
 
 h3 {
-  font-family: OpenSansBold;
+  font-family: @bold;
   font-size: 18px;
   text-align: center;
 }
@@ -203,7 +206,7 @@ h3 {
 
 
 .main-nav {
-  font-family: OpenSansBold;
+  font-family: @bold;
   font-size: 18px;
   align-text: center;
   margin: 0;
@@ -234,6 +237,7 @@ h3 {
 
 
 .page-main {
+  margin-bottom: 50px;
 
   &-download {
     background-color: #1d2631;
@@ -252,7 +256,7 @@ h3 {
       margin-bottom: 30px;
 
       &-link {
-        font-family: OpenSansBold;
+        font-family: @bold;
         font-size: 18px;
         text-decoration: none;
         color: #fff;
@@ -314,5 +318,79 @@ h3 {
   &-price {
     padding-top: 90px;
     background-color: @bg_block;
+    &__table {
+      background-color: #fff;
+      text-transform: uppercase;
+      border-collapse: collapse;
+      width: 320px;
+      &-null {
+        width: 20px;
+        background-color: #283645;
+      }
+      &-title {
+        position: relative;
+        border-left: 2px solid @bg_block;
+        border-right: 2px solid @bg_block;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: #fff;
+        font-family: @bold;
+        font-size: 18px;
+        background-color: #283645;
+        line-height: 1.5;
+         span {
+           font-family: @light;
+            font-size: 24px;
+         }
+        }
+      &-col-1, &-col-4 {
+        border-bottom: 2px solid @bg_block;
+      }
+
+      &-col-2 {
+        padding: 20px 0 20px 20px;
+        border-left: 2px solid @bg_block;
+       border-bottom: 2px solid @bg_block;
+      }
+      &-col-3 {
+        padding-top: 15px;
+        border-right: 2px solid @bg_block;
+        border-bottom: 2px solid @bg_block;
+
+      }
+    }
+    &__img {
+      top: 0;
+      left: 0;
+      width: 74px;
+      height: 73px;
+      background: url("@{dir}/table_hit.png");
+      position: absolute;
+    }
+  }
+}
+
+.page-footer {
+  &__header {
+    line-height: 1.5;
+    padding-bottom: 40px;
+  }
+  &__title {
+    padding-bottom: 10px;
+
+  }
+  &__text {
+    color: #d22856;
+    text-align: center;
+    font-family: @light;
+    font-size: 24px;
+    padding-bottom: 30px;
+
+  }
+  &__map {
+    width: 320px;
+    height: 209px;
+    background: url("@{dir}/map.jpg");
+
   }
 }
