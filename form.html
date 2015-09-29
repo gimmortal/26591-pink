@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+</head>
+
+<body>
+
+<header class="page-header">
+  <div class="page-header-menu">
+    <div class="page-header-menu__logo-wrap">
+      <a class="page-header-menu__logo-link" href="/">
+        <img src="img/logo.png" alt="Pink" />
+      </a>
+    </div>
+    <div class="page-header-menu__nav-wrap">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="">Информация</a></li>
+          <li class="main-nav__item"><a href="">Блог</a></li>
+          <li class="main-nav__item"><a href="">Отзывы</a></li>
+          <li class="main-nav__item"><a href="">Конкурс</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <h1 class="page-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+</header>
+<!-- PAGE-FORM -->
+<main class="page-form">
+  <div class="page-form-history">
+    <h4 class="page-form-history_header">оделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</h4>
+
+    <form class="history__form" action="/echo" method="post">
+      <label class="history__form-title" for="name_field">
+        Имя:*
+      </label>
+      <input class="history__form-field" type="text" name="name" id="name_field" placeholder="Введите ваше имя">
+      <label class="history__form-title" for="family_field">
+        Фамилия:*
+      </label>
+      <input class="history__form-field" type="text" name="family" id="family_field" placeholder="Укажите фамилию">
+      <label class="history__form-title" for="surname_field">
+        Отчество:*
+      </label>
+      <input class="history__form-field" type="text" name="surname" id="surname_field" placeholder="Ну и отчество тоже">
+    </form>
+  </div>
+
+  <div class="page-form-apptravel">
+    <h3 class="page-form-apptravel__header">С каким приложением путешествовали? *</h3>
+    <form class=page-form-apptravel__radio" action="#" method="post">
+      <input class="page-form-apptravel__radio-item" id="ios" type="radio" name="ios_radio" value="ios" checked="">
+      <label class="page-form-apptravel__radio-label" for="ios">Pink для iOS</label>
+      <input class="page-form-apptravel__radio-item" id="android" type="radio" name="android_radio" value="android">
+      <label class="page-form-apptravel__radio-label" for="android">Pink на Android</label>
+      <input class="page-form-apptravel__radio-item" id="windows" type="radio" name="windows_radio" value="windows">
+      <label class="page-form-apptravel__radio-label" for="windows">Windows Phone</label>
+    </form>
+  </div>
+  <div class="page-form-travel">
+    <h3 class="page-form-travel__title">Когда вы путешествовали? *</h3>
+    <form class="page-form-travel__form" action="/echo" method="post">
+      <input class="page-form-travel__form-field" type="date" name="travel__date__departure" value="date">
+      <h3 class="page-form-travel__title">Дата выезда</h3>
+      <input class="page-form-travel__form-btn" type="button" name="travel__plus" value="+">
+      <input type="text" name="travel__continuance">
+      <input class="page-form-travel__form-btn" type="button" name="travel__minus" value="-">
+      <h3 class="page-form-travel__title">Продолжительность</h3>
+      <label>
+        <input class="page-form-travel__form-field" disabled type="date" name="travel__date_return" value="date">
+        <h3 class="page-form-travel__title">Дата возвращение</h3>
+      </label>
+    </form>
+  </div>
+  <div class="page-form-people">
+    <h3 class="page-form-people__title">Количество попутчиков</h3>
+    <form class="page-form-people__form" action="/echo" method="post">
+      <input class="page-form-people__form-btn" type="button" name="travel-people__plus" value="+">
+      <input class="page-form-people__form-field" type="text" name="travel-people__continuance" disabled>
+      <input class="page-form-people__form-btn" type="button" name="travel-people__minus" value="-">
+      <hr>
+      <table class="page-form-people__table">
+        <tr>
+          <th class="page-form-people__table-title">№</th>
+          <th class="page-form-people__table-title">Имя:*</th>
+        </tr>
+        <tr>
+          <td class="page-form-people__table-col-1">1</td>
+          <td class="page-form-people__table-col-2">
+            <input class="page-form-people__table-field" type="text" name="people__name" placeholder="Введите ваше имя">
+          </td>
+        </tr>
+        <tr>
+          <th class="page-form-people__table-col-1  people__table-col-nul"></th>
+          <th class="page-form-people__table-title">Прозвище</th>
+        </tr>
+        <tr>
+          <td class="page-form-people__table-col-1"></td>
+          <td class="page-form-people__table-col-2">
+            <input type="text" name="travel-people__nickname" placeholder="Ну как же без этого!">
+          </td>
+        </tr>
+      </table>
+      <table class="page-form-people__table">
+        <tr>
+          <th class="page-form-people__table-title">№</th>
+          <th class="page-form-people__table-title">Имя:*</th>
+        </tr>
+        <tr>
+          <td class="page-form-people__table-col-1">2</td>
+          <td class="page-form-people__table-col-2">
+            <input class="page-form-people__table-field" type="text" name="people__name" placeholder="Введите ваше имя">
+          </td>
+        </tr>
+        <tr>
+          <th class="page-form-people__table-col-1  people__table-col-nul"></th>
+          <th class="page-form-people__table-title">Прозвище</th>
+        </tr>
+        <tr>
+          <td class="page-form-people__table-col-1"></td>
+          <td class="page-form-people__table-col-2">
+            <input class="page-form-people__table-field" type="text" name="travel-people__nickname" placeholder="Ну как же без этого!">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div class="page-form-achievements">
+    <h3 class="page-form-achievements__title">Ваши безбашенные достижения в путешествии</h3>
+    <form class="page-form-achievements__form" action="/echo" method="post">
+      <input class="page-form-achievements__form-check" id="selfie" type="checkbox" name="selfie" value="selfie" checked="">
+      <label class="page-form-achievements__form-label" for="selfie">Сделал селфи с акулой</label>
+      <input class="page-form-achievements__form-check" id="burned" type="checkbox" name="burned" value="burned" checked="">
+      <label class="page-form-achievements__form-label" for="burned">Обгорел на пляже</label>
+      <input class="page-form-achievements__form-check" id="Chuck" type="checkbox" name="Chuck" value="Chuck">
+      <label class="page-form-achievements__form-label" for="Chuck">Видел Чака Норриса</label>
+      <input class="page-form-achievements__form-check" id="souvenirs" type="checkbox" name="souvenirs" value="souvenirs">
+      <label class="page-form-achievements__form-label" for="souvenirs">Накупил сувениров</label>
+      <input class="page-form-achievements__form-check" id="tower" type="checkbox" name="tower" value="tower" checked="">
+      <label class="page-form-achievements__form-label" for="tower">Удержал башню</label>
+      <input class="page-form-achievements__form-check" id="hotel" type="checkbox" name="hotel" value="hotel">
+      <label class="page-form-achievements__form-label" for="hotel">Разгромил отель</label>
+      </form>
+  </div>
+  <div class="page-form-photo">
+    <h3 class="page-form-photo__title">Ваши фотографии из поездки *</h3>
+    <div class="page-form-photo__btn">
+      <a class="page-form-photo__btn-link" href="#">Загрузить фото</a>
+    </div>
+    <hr>
+    <img class="page-form-photo__img" src="" alt="">
+    <img class="page-form-photo__img" src="" alt="">
+    <img class="page-form-photo__img" src="" alt="">
+    <img class="page-form-photo__img" src="" alt="">
+    <img class="page-form-photo__img" src="" alt="">
+    <img class="page-form-photo__img" src="" alt="">
+    <img class="page-form-photo__img" src="" alt="">
+    <img class="page-form-photo__img" src="" alt="">
+  </div>
+  <div class="page-form__btn">
+    <a class="page-form__link" href="#">Отправить форму</a>
+    <p><span>*</span>- обязательные поля</p>
+  </div>
+</main>
+<!-- FOOTER -->
+<footer class="page-footer">
+  <img class="page-footer__img" src="img/logo_bottom.png" height="40" width="145" alt="">
+  <div class="page-footer__social">
+    <ul class="page-footer__social-list">
+      <li class="page-footer__social__item-tw"><a href="">Мы в Твиттере</a></li>
+      <li class="page-footer__social__item-fb"><a href="">Мы на Facebook</a></li>
+      <li class="page-footer__social__item-inst"><a href="">Мы в Инстаграмме</a></li>
+    </ul>
+  </div>
+  <p>Разработано</p> <img class="page-footer__logo-academy" src="img/logo_html_academy.png" alt="Разработчик HTML Academy">
+</footer>
+</body>
+
+</html>
