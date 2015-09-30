@@ -71,8 +71,7 @@
   font-style: normal;
 }
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
   font-family: 'OpenSansRegular';
   font-size: 14px;
   width: 320px;
@@ -81,7 +80,42 @@ h1 {
   font-family: 'OpenSansLightRegular';
   font-size: 24px;
 }
+.wrapper {
+  margin: 0 auto;
+  width: 280px;
+}
 .page-header {
+  position: relative;
   height: 486px;
   background: url("../img/bg_header.jpg") no-repeat;
+}
+.page-header-menu {
+  background: rgba(0, 0, 0, 0.3);
+  height: 65px;
+}
+.page-header-menu__logo-wrap {
+  z-index: 1;
+  float: left;
+  padding-top: 20px;
+}
+.page-header-menu__nav-wrap {
+  padding-top: 20px;
+  float: right;
+}
+.page-header-menu__open-btn {
+  display: block;
+  width: 50px;
+  height: 24px;
+  background: url("../img/btn_menu-open.png") no-repeat;
+}
+.page-header-menu__popup {
+  top: 0px;
+  z-index: 2;
+  background-color: #283645;
+  position: absolute;
+}
+.main-nav {
+  font-family: 'OpenSansBold';
+  font-size: 18px;
+  align-text: center;
 }
