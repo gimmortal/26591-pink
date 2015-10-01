@@ -1,3 +1,6 @@
+// Импорт элементов для css3
+@import "lessmix.less";
+
 // Описание переменных
 @bg_block:  #f2f2f2;
 @color:     #000;
@@ -6,7 +9,7 @@
 @bold:      OpenSansBold;
 @light:     OpenSansLightRegular;
 @regular:   OpenSansRegular;
-
+@ptsbold:   PTSansBold;
 
 // Обычное использование
 
@@ -18,6 +21,17 @@
   *behavior: url("/assets/templates/js/boxsizing.htc");
 }
 
+// Загрузка шрифтов
+
+@font-face {
+  font-family: 'PTSansBold';
+  src: url('@{dirfont}/pts75f.eot');
+  src: url('@{dirfont}/pts75f.eot?#iefix') format('embedded-opentype'),
+  url('@{dirfont}/pts75f.woff') format('woff'),
+  url('@{dirfont}/pts75f.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'OpenSansBold';
@@ -131,7 +145,7 @@
 }
 
 body{
-  margin:0 auto;
+  .center;
   font-family: @regular;
   font-size: 14px;
   width: 320px;
@@ -149,14 +163,21 @@ h3 {
   text-align: center;
 }
 
+.clearfix::after {
+  content: '';
+  display: table;
+  height: 1px;
+  clear: both;
+}
+
 .wrapper {
-  margin:0 auto;
+  .center;
   width: 280px;
 }
 
 .page-header  {
   position: relative;
-  height: 486px;
+  min-height: 100px;
   background: url("@{dir}/bg_header.jpg") no-repeat;
 
   &-menu {
@@ -177,9 +198,8 @@ h3 {
     }
 
     &__open-btn {
+      .size(50px, 24px);
       display: block;
-      width: 50px;
-      height: 24px;
       background: url("@{dir}/btn_menu-open.png")  no-repeat;
     }
 
@@ -189,7 +209,7 @@ h3 {
       z-index: 2;
       background-color: #283645;
       position: absolute;
-      display: none;
+      .hide;
 
 //-- Сделать правильно расположение
       &-close {
@@ -203,8 +223,7 @@ h3 {
   }
 
   &__bg {
-    width: 320px;
-    height: 312px;
+    .size(320px, 312px);
     background: url("@{dir}/bg_header-phone.png");
   }
 }
@@ -212,19 +231,19 @@ h3 {
 .main-nav {
   font-family: @bold;
   font-size: 18px;
-  align-text: center;
+  text-align: center;
   margin: 0;
   padding: 0;
 
   &__item {
-    padding: 0 auto;
-    padding-top: 23px;
     text-align: center;
     border-top: 1px solid #000;
     height: 65px;
 
     &-link {
-      margin-top: 10px;
+      .size(100%, 100%);
+      padding-top: 23px;
+      .inline-block();
       text-decoration: none;
       text-transform: uppercase;
       color: #fff;
@@ -235,7 +254,10 @@ h3 {
 .page-header__title {
   color: #fff;
   line-height: 1.1;
-  margin-bottom: 28px;
+  padding-bottom: 28px;
+  &--size {
+    padding-bottom: 28px+25px;
+  }
 }
 
 .page-main {
@@ -248,13 +270,13 @@ h3 {
     margin-bottom: 45px;
 
     &__btn {
+      .rounded(30px);
+      .center;
       text-align: center;
       padding-top: 15px;
       padding-bottom: 15px;
-      margin: 0 auto;
       display: block;
       border: 3px solid #fff;
-      border-radius: 30px;
       margin-bottom: 30px;
 
       &-link {
@@ -272,7 +294,7 @@ h3 {
 
     &__item {
       padding-right: 35px;
-      display: inline-block;
+      .inline-block();
 
       &:last-child {
         padding-right: 0;
@@ -292,6 +314,10 @@ h3 {
       margin-bottom: 35px;
     }
 
+    &__item {
+      margin-bottom: 40px;
+    }
+
     &__container {
       padding-top: 90px;
       margin-bottom: 50px;
@@ -304,14 +330,12 @@ h3 {
 
     &__description {
       text-align: center;
-      padding-bottom: 40px;
       line-height: 1.8;
     }
 
     &__img {
-      margin-left: 22%;
-      width: 157px;
-      height: 281px;
+      .size(157px, 281px);
+      .center;
       background: url("@{dir}/page-main-phone.png") no-repeat;
     }
   }
@@ -377,15 +401,33 @@ h3 {
     }
 
     &__img {
+      .size(74px, 73px);
       top: 0;
       left: 0;
-      width: 74px;
-      height: 73px;
       background: url("@{dir}/table_hit.png");
       position: absolute;
     }
   }
 }
+
+
+.page-form {
+  margin-top: 55px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .page-footer {
   &__header {
@@ -406,8 +448,8 @@ h3 {
   }
 
   &__map {
-    width: 320px;
-    height: 209px;
+    .size(320px, 209px);
     background: url("@{dir}/map.jpg");
   }
 }
+
