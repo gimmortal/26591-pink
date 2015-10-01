@@ -43,22 +43,23 @@
 <!-- PAGE-FORM -->
 <main class="page-form">
   <div class="page-form-history">
-    <h4 class="page-form-history_header">оделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</h4>
-
-    <form class="history__form" action="/echo" method="post">
-      <label class="history__form-title" for="name_field">
+    <div class="wrapper">
+    <h4 class="page-form-history__header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</h4>
+      <form class="page-form-history__form" action="/echo" method="post">
+      <label class="page-form-history__form-title" for="name_field">
         Имя:*
       </label>
-      <input class="history__form-field" type="text" name="name" id="name_field" placeholder="Введите ваше имя">
-      <label class="history__form-title" for="family_field">
+      <input class="page-form-history__form-field" type="text" name="name" id="name_field" placeholder="Введите ваше имя">
+      <label class="page-form-history__form-title" for="family_field">
         Фамилия:*
       </label>
-      <input class="history__form-field" type="text" name="family" id="family_field" placeholder="Укажите фамилию">
-      <label class="history__form-title" for="surname_field">
+      <input class="page-form-history__form-field" type="text" name="family" id="family_field" placeholder="Укажите фамилию">
+      <label class="page-form-history__form-title" for="surname_field">
         Отчество:*
       </label>
-      <input class="history__form-field" type="text" name="surname" id="surname_field" placeholder="Ну и отчество тоже">
+      <input class="page-form-history__form-field" type="text" name="surname" id="surname_field" placeholder="Ну и отчество тоже">
     </form>
+    </div>
   </div>
 
   <div class="page-form-apptravel">

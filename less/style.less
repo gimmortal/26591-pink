@@ -3,6 +3,7 @@
 
 // Описание переменных
 @bg_block:  #f2f2f2;
+@color_serene: #d22856;
 @color:     #000;
 @dir:       '../img';
 @dirfont:   '../font';
@@ -414,6 +415,38 @@ h3 {
 .page-form {
   margin-top: 55px;
 
+  &-history {
+
+    &__header {
+      text-align: center;
+      line-height: 2;
+    }
+
+    &__form {
+      margin-top: 20px;
+
+      &-title {
+        padding-left: 25px;
+        display: block;
+        color: @color_serene;
+        text-transform: uppercase;
+      }
+
+      &-field {
+        border: 2px solid #e5e5e5;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        .size(100%, 60px);
+
+        [type="text"] {
+        color: #0000cc;
+        }
+      }
+    }
+
+
+  }
+
 }
 
 
@@ -440,7 +473,7 @@ h3 {
   }
 
   &__text {
-    color: #d22856;
+    color: @color_serene;
     text-align: center;
     font-family: @light;
     font-size: 24px;
