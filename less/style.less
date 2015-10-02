@@ -2,15 +2,16 @@
 @import "lessmix.less";
 
 // Описание переменных
-@bg_block:  #f2f2f2;
-@color_serene: #d22856;
-@color:     #000;
-@dir:       '../img';
-@dirfont:   '../font';
-@bold:      OpenSansBold;
-@light:     OpenSansLightRegular;
-@regular:   OpenSansRegular;
-@ptsbold:   PTSansBold;
+@bg_block:      #f2f2f2;
+@color_serene:  #d22856;
+@color:         #000;
+@color_form:    #283645;
+@dir:           '../img';
+@dirfont:       '../font';
+@bold:          OpenSansBold;
+@light:         OpenSansLightRegular;
+@regular:       OpenSansRegular;
+@ptsbold:       PTSansBold;
 
 // Обычное использование
 
@@ -416,6 +417,7 @@ h3 {
   margin-top: 55px;
 
   &-history {
+    margin-bottom: 42px;
 
     &__header {
       text-align: center;
@@ -437,16 +439,95 @@ h3 {
         margin-top: 15px;
         margin-bottom: 30px;
         .size(100%, 60px);
+      }
 
-        [type="text"] {
-        color: #0000cc;
-        }
+      & [type="text"] {
+        padding-left: 25px;
+        display:block;
+        font-size:14px;
+        font-family:"PT Sans Narrow", sans-serif;
+        text-transform:uppercase;
+      }
+      ::-webkit-input-placeholder { /* WebKit browsers */
+        color:    @color_form;
+      }
+      :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    @color_form;
+      }
+      ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    @color_form;
+      }
+      :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color:    @color_form;
       }
     }
+  }
+  &-apptravel {
+    padding-top: 42px;
+    background-color: @bg_block;
+    margin-bottom: 55px;
 
+    &__header {
+      font-family: @regular;
+      color: @color_serene;
+      margin-bottom: 40px;
+    }
 
+    &__radio {
+      display: block;
+
+      &-label {
+        font-family: @regular;
+        font-size: 18px;
+      }
+
+      &-item {
+        margin-bottom: 21px;
+        .opacity(0);
+        //display: none;
+      }
+
+      &-item:not(radio) +  &-label {
+        position: relative; /* будем позиционировать псевдочекбокс относительно label */
+        padding: 0 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
+      }
+
+      &-item:not(radio) + &-label:before {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: 0;
+        .size(35px, 35px);
+        .rounded (50%);
+        background: #fff;
+        border: 2px solid #e5e5e5;
+      }
+
+      &-item:checked + &-label:after {
+        content: '';
+        position: absolute;
+        top: 7.7px;
+        left: 12.2px;
+        .size(15px, 15px);
+        border-radius: 50%;
+        background: @color_serene;
+        .transition-all(.2s);
+      }
+
+      &-wrap {
+        padding-bottom: 35px;
+        display: block;
+      }
+
+      //&-item:focus + &-label:before {
+      //  box-shadow: 0 0 0 3px rgba(255,255,0,.5);
+      //}
+    }
   }
 
+  &-travel {
+
+  }
 }
 
 
