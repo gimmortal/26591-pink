@@ -385,17 +385,14 @@ h3 {
          }
       }
 
-      &-col-1, &-col-4 {
-        border-bottom: 2px solid @bg_block;
-      }
-
-      &-col-2 {
+      &-col-1 {
+        width: 90%;
         padding: 20px 0 20px 20px;
         border-left: 2px solid @bg_block;
         border-bottom: 2px solid @bg_block;
       }
 
-      &-col-3 {
+      &-col-2 {
         padding-top: 15px;
         border-right: 2px solid @bg_block;
         border-bottom: 2px solid @bg_block;
@@ -464,6 +461,7 @@ h3 {
       }
     }
   }
+
   &-apptravel {
     padding-top: 42px;
     background-color: @bg_block;
@@ -764,6 +762,7 @@ h3 {
       font-family: @regular;
       margin-bottom: 35px;
     }
+
     &__btn {
       font-family: @bold;
       text-transform: uppercase;
@@ -842,6 +841,7 @@ h3 {
         }
       }
     }
+
     &__text {
       text-align: center;
       text-transform: uppercase;
@@ -917,14 +917,15 @@ h3 {
       }
     }
   }
+
 .copyright {
   position: relative;
   margin-bottom: 50px;
   display: block;
   text-align: center;
 }
-  &__developed {
 
+  &__developed {
     text-align: center;
     display: inline-block;
     text-align: center;
@@ -935,13 +936,11 @@ h3 {
   &__logo-link {
     position: absolute;
     right: 55px;
-    top: -7px;
-
+    top: 5px;
     .size(27px, 34px);
     background: url("@{dir}/logo_html_academy.png") no-repeat;
     display: inline-block;
   }
-
 }
 
 
