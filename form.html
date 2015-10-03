@@ -80,27 +80,29 @@
     </form>
   </div>
   <div class="page-form-travel">
+    <div class="wrapper">
     <h3 class="page-form-travel__title">Когда вы путешествовали? *</h3>
     <form class="page-form-travel__form" action="/echo" method="post">
-      <input class="page-form-travel__form-field" type="date" name="travel__date__departure" value="date">
+      <input class="page-form-travel__form-field" type="text" name="travel__date__departure" value="1 апреля 2015">
       <h3 class="page-form-travel__title">Дата выезда</h3>
-      <input class="page-form-travel__form-btn" type="button" name="travel__plus" value="+">
-      <input type="text" name="travel__continuance">
-      <input class="page-form-travel__form-btn" type="button" name="travel__minus" value="-">
+      <button class="page-form-travel__form-btn" name="travel__plus">+</button>
+      <input class="page-form-travel__form-field page-form-travel__form-field--modern"  type="text" value="10 дней" name="travel__continuance">
+      <button class="page-form-travel__form-btn" name="travel__minus">-</button>
       <h3 class="page-form-travel__title">Продолжительность</h3>
       <label>
-        <input class="page-form-travel__form-field" disabled type="date" name="travel__date_return" value="date">
-        <h3 class="page-form-travel__title">Дата возвращение</h3>
+        <input class="page-form-travel__form-field" disabled type="text" name="travel__date_return" value="1 апреля 2015">
+        <h3 class="page-form-travel__title">Дата возвращения</h3>
       </label>
     </form>
+    </div>
   </div>
   <div class="page-form-people">
+    <div class="wrapper">
     <h3 class="page-form-people__title">Количество попутчиков</h3>
     <form class="page-form-people__form" action="/echo" method="post">
-      <input class="page-form-people__form-btn" type="button" name="travel-people__plus" value="+">
-      <input class="page-form-people__form-field" type="text" name="travel-people__continuance" disabled>
-      <input class="page-form-people__form-btn" type="button" name="travel-people__minus" value="-">
-      <hr>
+      <button class="page-form-people__form-btn" name="travel-people__plus">+</button>
+      <input class="page-form-people__form-field page-form-people__form-field--modern" type="text" name="travel-people__continuance" value="2 чел">
+      <button class="page-form-people__form-btn clearfix" name="travel-people__minus">-</button>
       <table class="page-form-people__table">
         <tr>
           <th class="page-form-people__table-title">№</th>
@@ -113,17 +115,17 @@
           </td>
         </tr>
         <tr>
-          <th class="page-form-people__table-col-1  people__table-col-nul"></th>
+          <th class="page-form-people__table-title"></th>
           <th class="page-form-people__table-title">Прозвище</th>
         </tr>
         <tr>
-          <td class="page-form-people__table-col-1"></td>
+          <td class="page-form-people__table-col-1 page-form-people__table-col-null" ></td>
           <td class="page-form-people__table-col-2">
-            <input type="text" name="travel-people__nickname" placeholder="Ну как же без этого!">
+            <input class="page-form-people__table-field" type="text" name="travel-people__nickname" placeholder="Ну как же без этого!">
           </td>
         </tr>
       </table>
-      <table class="page-form-people__table">
+      <table class="page-form-people__table page-form-people__table--none">
         <tr>
           <th class="page-form-people__table-title">№</th>
           <th class="page-form-people__table-title">Имя:*</th>
@@ -135,66 +137,120 @@
           </td>
         </tr>
         <tr>
-          <th class="page-form-people__table-col-1  people__table-col-nul"></th>
+          <th class="page-form-people__table-title"></th>
           <th class="page-form-people__table-title">Прозвище</th>
         </tr>
         <tr>
-          <td class="page-form-people__table-col-1"></td>
+          <td class="page-form-people__table-col-1 page-form-people__table-col-null"></td>
           <td class="page-form-people__table-col-2">
             <input class="page-form-people__table-field" type="text" name="travel-people__nickname" placeholder="Ну как же без этого!">
           </td>
         </tr>
       </table>
     </form>
+    </div>
   </div>
   <div class="page-form-achievements">
-    <h3 class="page-form-achievements__title">Ваши безбашенные достижения в путешествии</h3>
+    <h3 class="page-form-achievements__title">Ваши безбашенные <br>достижения в путешествии</h3>
     <form class="page-form-achievements__form" action="/echo" method="post">
+      <div class="page-form-achievements__form-wrap">
       <input class="page-form-achievements__form-check" id="selfie" type="checkbox" name="selfie" value="selfie" checked="">
       <label class="page-form-achievements__form-label" for="selfie">Сделал селфи с акулой</label>
+      </div>
+      <div class="page-form-achievements__form-wrap">
       <input class="page-form-achievements__form-check" id="burned" type="checkbox" name="burned" value="burned" checked="">
       <label class="page-form-achievements__form-label" for="burned">Обгорел на пляже</label>
+      </div>
+      <div class="page-form-achievements__form-wrap">
       <input class="page-form-achievements__form-check" id="Chuck" type="checkbox" name="Chuck" value="Chuck">
       <label class="page-form-achievements__form-label" for="Chuck">Видел Чака Норриса</label>
+      </div>
+      <div class="page-form-achievements__form-wrap">
       <input class="page-form-achievements__form-check" id="souvenirs" type="checkbox" name="souvenirs" value="souvenirs">
       <label class="page-form-achievements__form-label" for="souvenirs">Накупил сувениров</label>
+      </div>
+      <div class="page-form-achievements__form-wrap">
       <input class="page-form-achievements__form-check" id="tower" type="checkbox" name="tower" value="tower" checked="">
       <label class="page-form-achievements__form-label" for="tower">Удержал башню</label>
+      </div>
+      <div class="page-form-achievements__form-wrap">
       <input class="page-form-achievements__form-check" id="hotel" type="checkbox" name="hotel" value="hotel">
       <label class="page-form-achievements__form-label" for="hotel">Разгромил отель</label>
-      </form>
+      </div>
+    </form>
   </div>
   <div class="page-form-photo">
+    <div class="page-form-photo__wrap">
+    <div class="wrapper">
     <h3 class="page-form-photo__title">Ваши фотографии из поездки *</h3>
-    <div class="page-form-photo__btn">
-      <a class="page-form-photo__btn-link" href="#">Загрузить фото</a>
-    </div>
+       <button class="page-form-photo__btn">Загрузить фото</button>
     <hr>
-    <img class="page-form-photo__img" src="" alt="">
-    <img class="page-form-photo__img" src="" alt="">
-    <img class="page-form-photo__img" src="" alt="">
-    <img class="page-form-photo__img" src="" alt="">
-    <img class="page-form-photo__img" src="" alt="">
-    <img class="page-form-photo__img" src="" alt="">
-    <img class="page-form-photo__img" src="" alt="">
-    <img class="page-form-photo__img" src="" alt="">
+      <ul class="page-form-photo__img">
+        <li class="page-form-photo__img-item">
+          <span class="page-form-photo__img-item--close"></span>
+          <img src="img/img.jpg" alt=""/>
+          <p class="page-form-photo__img-item-title">img-1.jpg</p>
+        </li>
+        <li class="page-form-photo__img-item">
+          <span class="page-form-photo__img-item--close"></span>
+          <img src="img/img.jpg" alt=""/>
+          <p class="page-form-photo__img-item-title">img-2.jpg</p>
+        </li>
+        <li class="page-form-photo__img-item">
+          <span class="page-form-photo__img-item--close"></span>
+          <img src="img/img.jpg" alt=""/>
+          <p class="page-form-photo__img-item-title">img-3.jpg</p>
+        </li>
+        <li class="page-form-photo__img-item">
+          <span class="page-form-photo__img-item--close"></span>
+          <img src="img/img.jpg" alt=""/>
+          <p class="page-form-photo__img-item-title">img-4.jpg</p>
+        </li>
+        <li class="page-form-photo__img-item">
+          <span class="page-form-photo__img-item--close"></span>
+          <img src="img/img.jpg" alt=""/>
+          <p class="page-form-photo__img-item-title">img-5.jpg</p>
+        </li>
+        <li class="page-form-photo__img-item">
+          <span class="page-form-photo__img-item--close"></span>
+          <img src="img/img.jpg" alt=""/>
+          <p class="page-form-photo__img-item-title">img-6.jpg</p>
+        </li>
+        <li class="page-form-photo__img-item">
+          <span class="page-form-photo__img-item--close"></span>
+          <img src="img/img.jpg" alt=""/>
+          <p class="page-form-photo__img-item-title">img-7.jpg</p>
+        </li>
+        <li class="page-form-photo__img-item">
+          <span class="page-form-photo__img-item--close"></span>
+          <img src="img/img.jpg" alt=""/>
+          <p class="page-form-photo__img-item-title">img-8.jpg</p>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div class="wrapper">
+  <button class="page-form-photo__btn page-form-photo__btn--green">Отправить форму</button>
+    <p class="page-form-photo__text"><span>*</span>&mdash; обязательные поля</p>
   </div>
-  <div class="page-form__btn">
-    <a class="page-form__link" href="#">Отправить форму</a>
-    <p><span>*</span>- обязательные поля</p>
-  </div>
+    </div>
+
 </main>
 <!-- FOOTER -->
 <footer class="page-footer">
+  <div class="wrapper">
   <img class="page-footer__img" src="img/logo_bottom.png" height="40" width="145" alt="">
   <div class="page-footer__social">
     <ul class="page-footer__social-list">
-      <li class="page-footer__social__item-tw"><a href="">Мы в Твиттере</a></li>
-      <li class="page-footer__social__item-fb"><a href="">Мы на Facebook</a></li>
-      <li class="page-footer__social__item-inst"><a href="">Мы в Инстаграмме</a></li>
+      <li class="page-footer__social__item page-footer__social__item-tw"><a href=""></a></li>
+      <li class="page-footer__social__item page-footer__social__item-fb"><a href=""></a></li>
+      <li class="page-footer__social__item page-footer__social__item-inst"><a href=""></a></li>
     </ul>
   </div>
-  <p>Разработано</p> <img class="page-footer__logo-academy" src="img/logo_html_academy.png" alt="Разработчик HTML Academy">
+    <div class="copyright">
+    <span class="page-footer__developed">Разработано</span> <a class="page-footer__logo-link" href=""></a>
+    </div>
+    </div>
 </footer>
 </body>
 
