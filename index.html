@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Pink</title>
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -12,14 +13,14 @@
 <header class="page-header">
   <div class="page-header-menu">
     <div class="wrapper clearfix">
-    <div class="page-header-menu__logo-wrap">
-      <a class="page-header-menu__logo-link" href="/index.html">
-        <img src="img/logo.png" alt="Pink" />
-      </a>
-    </div>
-     <div class="page-header-menu__nav-wrap">
-       <a href="#" class="page-header-menu__open-btn"></a>
-    </div>
+      <div class="page-header-menu__logo-wrap">
+        <a class="page-header-menu__logo-link" href="/index.html">
+          <img src="img/logo.png" alt="Pink" />
+        </a>
+      </div>
+      <div class="page-header-menu__nav-wrap">
+        <a href="#" class="page-header-menu__open-btn"></a>
+      </div>
     </div>
   </div>
 
@@ -36,26 +37,26 @@
     </nav>
   </div>
 
-     <h1 class="page-header__title">Взгляните на жизнь <br> иначе!</h1>
-<div class="page-header__bg"></div>
+  <h1 class="page-header__title">Взгляните на жизнь <br> иначе!</h1>
+  <div class="page-header__bg"></div>
 </header>
 <main class="page-main">
   <div class="page-main-download">
     <div class="wrapper">
-    <div class="page-main-download__btn">
-      <a class="page-main-download__btn-link" href="/">Скачать приложение</a>
+      <div class="page-main-download__btn">
+        <a class="page-main-download__btn-link" href="/">Скачать приложение</a>
+      </div>
+      <ul class="page-main-download__list">
+        <li class="page-main-download__item"><img src="img/item_apple.png" height="57" width="46" alt=""></li>
+        <li class="page-main-download__item"><img src="img/item_android.png" height="47" width="42" alt=""></li>
+        <li class="page-main-download__item"><img src="img/item_windows.png" height="42" width="44" alt=""></li>
+      </ul>
+      <p class="page-main-download__description">
+        Доступно для iPhone, iPad, Android,
+        <br> Windows Phone, OS X, Windows 8
+      </p>
     </div>
-    <ul class="page-main-download__list">
-      <li class="page-main-download__item"><img src="img/item_apple.png" height="57" width="46" alt=""></li>
-      <li class="page-main-download__item"><img src="img/item_android.png" height="47" width="42" alt=""></li>
-      <li class="page-main-download__item"><img src="img/item_windows.png" height="42" width="44" alt=""></li>
-    </ul>
-    <p class="page-main-download__description">
-      Доступно для iPhone, iPad, Android,
-      <br> Windows Phone, OS X, Windows 8
-    </p>
-    </div>
-    </div>
+  </div>
 
   <section class="page-main-post">
     <h2 class="page-main-post__header">
@@ -64,18 +65,18 @@
     </h2>
     <article class="page-main-post__container">
       <div class="wrapper">
-      <section class="page-main-post__item">
-        <h3 class="page-main-post__title">Поднимет настроение</h3>
-        <p class="page-main-post__description">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-      </section>
-      <section class="page-main-post__item ">
-        <h3 class="page-main-post__title">Меняем мир вокруг</h3>
-        <p class="page-main-post__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-      </section>
-      <section class="page-main-post__item">
-        <h3 class="page-main-post__title">Заводит новых друзей</h3>
-        <p class="page-main-post__description ">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-      </section>
+        <section class="page-main-post__item">
+          <h3 class="page-main-post__title">Поднимет настроение</h3>
+          <p class="page-main-post__description">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+        </section>
+        <section class="page-main-post__item ">
+          <h3 class="page-main-post__title">Меняем мир вокруг</h3>
+          <p class="page-main-post__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </section>
+        <section class="page-main-post__item">
+          <h3 class="page-main-post__title">Заводит новых друзей</h3>
+          <p class="page-main-post__description ">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        </section>
         <div class="page-main-post__img">
         </div>
       </div>
@@ -83,57 +84,74 @@
   </section>
   <div class="page-main-slider-reviews ">
     <div class="wrapper">
-    <article class="page-main-slider-reviews__item ">
-      <h3 class="page-main-slider-reviews__header">Николай Петров</h3>
-      <div class="page-main-slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
-    </article>
-    <article class="page-main-slider-reviews__item ">...</article>
-    <article class="page-main-slider-reviews__item ">...</article>
-    <div class="page-main-slider-reviews__pagination ">
-      <span class="page-main-slider-reviews__pagination-item, page-main-slider-reviews__pagination-item-active"></span>
-      <span class="page-main-slider-reviews__pagination-item"></span>
-      <span class="page-main-slider-reviews__pagination-item"></span>
-    </div>
+      <article class="page-main-slider-reviews__item ">
+        <h3 class="page-main-slider-reviews__header">Николай Петров</h3>
+        <div class="page-main-slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
+      </article>
+      <!--<article class="page-main-slider-reviews__item">...</article>-->
+      <!--<article class="page-main-slider-reviews__item">...</article>-->
+      <ul class="page-main-slider-reviews__controls">
+        <li class="page-main-slider-reviews__control page-main-slider-reviews__control--active"></li>
+        <li class="page-main-slider-reviews__control"></li>
+        <li class="page-main-slider-reviews__control"></li>
+      </ul>
     </div>
   </div>
   <section class="page-main-price">
     <table class="page-main-price__table">
       <tr>
-        <th class="page-main-price__table-title" colspan="2 ">Стандарт
-          <br><span>3.99 USD</span>
-          <div class="page-main-price__img"></div>
-          <!--<p class="page-main-price__text"></p>-->
+        <th class="page-main-price__table-title">
+          <div class="page-main-price__table-header">
+            База
+            <span>1.99 USD</span>
+          </div>
+        </th>
+        <th class="page-main-price__table-title">
+          <div class="page-main-price__table-header">
+            Стандарт
+            <div class="page-main-price__img"></div>
+            <span>3.99 USD</span>
+          </div>
+        </th>
+        <th class="page-main-price__table-title">
+          <div class="page-main-price__table-header">
+            Анлим
+            <span>9.99 USD</span>
+          </div>
         </th>
       </tr>
       <tr>
-        <td class="page-main-price__table-col-1 ">Розовый фильтр</td>
-        <td class="page-main-price__table-col-2 "><img src="img/yes.png " height="22 " width="29 " alt=" "></td>
+        <td class="page-main-price__table-col ">Розовый фильтр<span class="page-main-price__table-col-yes"></span></td>
+        <td class="page-main-price__table-col ">Розовый фильтр<span class="page-main-price__table-col-yes"></span></td>
+        <td class="page-main-price__table-col ">Розовый фильтр<span class="page-main-price__table-col-yes"></span></td>
       </tr>
       <tr>
-        <td class="page-main-price__table-col-1 ">Смайлики</td>
-        <td class="page-main-price__table-col-2 "><img src="img/yes.png " height="22 " width="29 " alt=" "></td>
+        <td class="page-main-price__table-col ">Смайлики<span class="page-main-price__table-col-no"></span></td>
+        <td class="page-main-price__table-col ">Смайлики<span class="page-main-price__table-col-yes"></span></td>
+        <td class="page-main-price__table-col ">Смайлики<span class="page-main-price__table-col-yes"></span></td>
       </tr>
       <tr>
-        <td class="page-main-price__table-col-1 ">Комментарии</td>
-        <td class="page-main-price__table-col-2 "><img src="img/no.png " height="25 " width="29 " alt=" "></td>
+        <td class="page-main-price__table-col ">Комментарии<span class="page-main-price__table-col-no"></span></td>
+        <td class="page-main-price__table-col ">Комментарии<span class="page-main-price__table-col-no"></span></td>
+        <td class="page-main-price__table-col ">Комментарии<span class="page-main-price__table-col-yes"></span></td>
       </tr>
     </table>
-    <div class="page-main-price-main-price__pagination ">
-      <span>pagination}}<br><br><br><br><br><br><br></span> <!--Делать надо, незнаю как правильно!-->
-      <span class="page-main-price-main-price__pagination-table-active "></span>
-      <span></span>
-    </div>
+    <ul class="page-main-price__controls">
+      <li class="page-main-price__control "></li>
+      <li class="page-main-price__control page-main-price__control--active"></li>
+      <li class="page-main-price__control"></li>
+    </ul>
   </section>
 </main>
 
-<footer class="page-footer ">
-  <h2 class="page-footer__header ">Остались вопросы?<br>
+<footer class="page-footer">
+  <h2 class="page-footer__header">Остались вопросы?<br>
     Свяжитесь с нами!</h2>
-  <h3 class="page-footer__title ">Звоните:</h3>
-  <p class="page-footer__text ">
+  <h3 class="page-footer__title">Звоните:</h3>
+  <p class="page-footer__text">
     +7(812)555-66-66
   </p>
-  <h3 class="page-footer__title ">Пишите:</h3>
+  <h3 class="page-footer__title">Пишите:</h3>
   <p class="page-footer__text ">
     mail@htmlacademy.ru
   </p>
@@ -146,5 +164,15 @@
 
   </div>
 </footer>
+<script type="text/javascript">
+  $('.page-main-price__control').click(function(e) {
+    var index = $('.page-main-price__control').index(this);
+    $('.page-main-price__control').removeClass('.page-main-price__control--active');
+    $(this).addClass('.page-main-price__control--active');
+    $('.page-main-price__table')
+      .css('margin-left', -(index * $('.page-main-price__table td').width()));
+  });
+</script>
 </body>
+
 </html>
