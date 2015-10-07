@@ -157,7 +157,7 @@ body{
   .center;
   font-family: @regular;
   font-size: 14px;
-  width: 320px;
+
 }
 
 h1, h2 {
@@ -194,16 +194,27 @@ h3 {
   background-size: cover;
 
   &-menu {
-    background: rgba(0,0,0,0.3); //Прозрачный фон
+    background: rgba(0, 0, 0, 0.3); //Прозрачный фон
     height: 65px;
     margin-bottom: 21px;
 
-      &__logo-wrap {
-        position: absolute;
-        z-index: 3;
-        float: left;
-        padding-top: 20px;
+    &__logo {
+
+      &-link {
+        display: block;
       }
+
+       &-tablet {
+          .hide;
+        }
+
+      &-wrap {
+      padding-top: 20px;
+      position: absolute;
+      z-index: 3;
+      float: left;
+    }
+  }
 
     &__nav-wrap {
       padding-top: 20px;
@@ -235,10 +246,13 @@ h3 {
       }
     }
   }
-
   &__bg {
-    img {
+    &-mobile {
       display: block;
+    }
+
+    &-tablet {
+      .hide;
     }
   }
 
@@ -320,6 +334,51 @@ h3 {
   padding-bottom: 25px;
   &--size {
     padding-bottom: 28px+25px;
+  }
+}
+
+// Планшетная версия
+@media(min-width: 480px) and (max-width: 992px) {
+  .page-header {
+    .img-retina('@{dir}/background-tablet@1x.jpg';'@{dir}/background-tablet@2x.jpg';'@{dir}/background-tablet@2x.jpg'; auto; 100%);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+  }
+  //.wrapper {
+  //  width: 700px;
+  //}
+  .page-header-menu__logo-tablet  {
+    display: block;
+  }
+
+  .page-header-menu__logo-mobile {
+    .hide;
+  }
+  .page-header-menu__logo-wrap {
+    padding-top: 30px;
+  }
+
+  .page-header-menu {
+    height: 110px;
+  }
+
+  .wrapper {
+    width: 700px;
+  }
+
+  .page-header__bg-tablet {
+    .img-retina('@{dir}/iphone-hand-tablet@1x.png';'@{dir}/iphone-hand-tablet@2x.png';'@{dir}/iphone-hand-tablet@2x.png'; auto; 100%);
+    width: 700px;
+    height: 545px;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    display: block;
+  }
+
+  .page-header__bg-mobile {
+    .hide;
   }
 }
 
@@ -1227,6 +1286,5 @@ h3 {
 
       }
     }
-
   }
 }
