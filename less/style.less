@@ -186,11 +186,9 @@ h3 {
 
 .page-header  {
   margin-bottom: 50px;
-
-  &:extend(.clearfix);
   position: relative;
   height: 729px;
-  .img-retina('@{dir}/background-mobile@1x.jpg';'@{dir}/background-mobile@2x.jpg'; auto; 100%);
+  .img-retina('@{dir}/background-mobile@1x.jpg';'@{dir}/background-mobile@2x.jpg';'@{dir}/background-mobile@3x.jpg'; auto; 100%);
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -239,15 +237,15 @@ h3 {
   }
 
   &__bg {
-    display: block;
-    .size(320px, 312px);
-    background: url("@{dir}/bg_header-phone.png");
+    img {
+      display: block;
+    }
   }
 
   &-download {
     background-color: #1d2631;
     padding-top: 27px;
-    padding-bottom: 25px;
+    padding-bottom: 35px;
     margin-bottom: 45px;
 
     &__btn {
@@ -316,6 +314,7 @@ h3 {
 }
 
 .page-header__title {
+  display: block;
   color: #fff;
   line-height: 1.3;
   padding-bottom: 25px;
@@ -351,10 +350,26 @@ h3 {
       line-height: 1.8;
     }
 
-    &__img {
-      .size(157px, 281px);
+    &__case {
+      padding-top: 15px;
+      position: relative;
+      display: block;
       .center;
-      background: url("@{dir}/page-main-phone.png") no-repeat;
+      width: 157px;
+      height: 278px;
+      .img-retina('@{dir}/iphone-case-mobile@1x.png';'@{dir}/iphone-case-mobile@2x.png';'@{dir}/iphone-case-mobile@3x.png'; auto; 100%);
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-size: cover;
+      overflow: hidden;
+
+      &-img {
+        margin-top: 20px;
+        display: block;
+        .center;
+
+      }
+
     }
   }
 
