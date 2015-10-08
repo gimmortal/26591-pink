@@ -11,7 +11,7 @@
 @dir:           '../img';
 @dirfont:       '../font';
 @bold:          OpenSansBold;
-@light:         OpenSansLightRegular;
+@light:         OpenSansLight;
 @regular:       OpenSansRegular;
 @ptsbold:       PTSansBold;
 @italic:        OpenSansItalic;
@@ -88,14 +88,12 @@
 }
 
 @font-face {
-  font-family: 'OpenSansLightRegular';
+  font-family: 'OpenSansLight';
   src: url('@{dirfont}/opensans-light.eot');
   src: url('@{dirfont}/opensans-light.eot?#iefix') format('embedded-opentype'),
   url('@{dirfont}/opensans-light.woff') format('woff'),
   url('@{dirfont}/opensans-light.ttf') format('truetype');
-  font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
@@ -181,7 +179,7 @@ h3 {
 
 .wrapper {
   .center;
-  width: 280px;
+  width: 87.5%;
 }
 
 .page-header  {
@@ -265,6 +263,7 @@ h3 {
     &__btn {
       .rounded(30px);
       .center;
+      .size(280px, 100%);
       text-align: center;
       display: block;
       border: 3px solid #fff;
@@ -274,7 +273,7 @@ h3 {
         padding-top: 12px;
         padding-bottom: 12px;
         display: inline-block;
-        .size(100%, 100%);
+        .size(280px, 100%);
         font-family: @bold;
         font-size: 18px;
         text-decoration: none;
@@ -364,7 +363,7 @@ h3 {
   }
 
   .wrapper {
-    width: 700px;
+    width: 88.57%;
   }
 
   .page-header__bg-tablet {
@@ -375,10 +374,41 @@ h3 {
     background-position: 50% 0;
     background-size: cover;
     display: block;
+    //margin-left: 190px;
+    margin-top: 70px;
+
   }
 
   .page-header__bg-mobile {
     .hide;
+  }
+
+  .page-header__title {
+    position: absolute;
+    font-size: 40px;
+    text-align: left;
+    display: block;
+    color: #fff;
+    line-height: 1.3;
+    padding-bottom: 0;
+    //padding-left: 100px;
+    //padding-top: 100px;
+
+    //padding-bottom: 25px;
+      //padding-bottom: 28px+25px;
+    }
+  .page-header-download {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 280px;
+    background: none;
+
+    &_btn {
+      display: inline-block;
+      width: 280px;
+    }
   }
 }
 
@@ -428,7 +458,6 @@ h3 {
         .center;
 
       }
-
     }
   }
 
