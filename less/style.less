@@ -1,7 +1,8 @@
 // Импорт элементов для css3
+@import "fonts.less";
+@import "reset.less";
 @import "lessmix.less";
 @import "image.less";
-@import "reset.less";
 
 // Описание переменных
 @bg_block:      #f2f2f2;
@@ -26,127 +27,6 @@
   *behavior: url("/assets/templates/js/boxsizing.htc");
 }
 
-// Загрузка шрифтов
-
-@font-face {
-  font-family: 'PTSansBold';
-  src: url('@{dirfont}/pts75f.eot');
-  src: url('@{dirfont}/pts75f.eot?#iefix') format('embedded-opentype'),
-  url('@{dirfont}/pts75f.woff') format('woff'),
-  url('@{dirfont}/pts75f.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'OpenSansBold';
-  src: url('@{dirfont}/opensans-bold.eot');
-  src: url('@{dirfont}/opensans-bold.eot?#iefix') format('embedded-opentype'),
-  url('@{dirfont}/opensans-bold.woff') format('woff'),
-  url('@{dirfont}/opensans-bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'OpenSansBoldItalic';
-  src: url('@{dirfont}/opensans-bolditalic.eot');
-  src: url('@{dirfont}/opensans-bolditalic.eot?#iefix') format('embedded-opentype'),
-  url('@{dirfont}/opensans-bolditalic.woff') format('woff'),
-  url('@{dirfont}/opensans-bolditalic.ttf') format('truetype');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'OpenSansExtraboldRegular';
-  src: url('@{dirfont}/opensans-extrabold.eot');
-  src: url('@{dirfont}/opensans-extrabold.eot?#iefix') format('embedded-opentype'),
-  url('@{dirfont}/opensans-extrabold.woff') format('woff'),
-  url('@{dirfont}/opensans-extrabold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'OpenSansExtraboldItalic';
-  src: url('@{dirfont}/opensans-extrabolditalic.eot');
-  src: url('@{dirfont}/opensans-extrabolditalic.eot?#iefix') format('embedded-opentype'),
-  url('@{dirfont}/opensans-extrabolditalic.woff') format('woff'),
-  url('@{dirfont}/opensans-extrabolditalic.ttf') format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'OpenSansItalic';
-  src: url('@{dirfont}/opensans-italic.eot');
-  src: url('@{dirfont}/opensans-italic.eot?#iefix') format('embedded-opentype'),
-  url('@{dirfont}/opensans-italic.woff') format('woff'),
-  url('@{dirfont}/opensans-italic.ttf') format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'OpenSansLight';
-  src: url('@{dirfont}/opensans-light.eot');
-  src: url('@{dirfont}/opensans-light.eot?#iefix') format('embedded-opentype'),
-  url('@{dirfont}/opensans-light.woff') format('woff'),
-  url('@{dirfont}/opensans-light.ttf') format('truetype');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'OpenSansLightItalic';
-  src: url('@{dirfont}/opensans-lightitalic.eot');
-  src: url('@{dirfont}/opensans-lightitalic.eot?#iefix') format('embedded-opentype'),
-  url('@{dirfont}/opensans-lightitalic.woff') format('woff'),
-  url('@{dirfont}/opensans-lightitalic.ttf') format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'OpenSansRegular';
-  src: url('@{dirfont}/opensans-regular.eot');
-  src: url('@{dirfont}/opensans-regular.eot?#iefix') format('embedded-opentype'),
-  url('@{dirfont}/opensans-regular.woff') format('woff'),
-  url('@{dirfont}/opensans-regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'OpenSansSemiboldRegular';
-  src: url('@{dirfont}/opensans-semibold.eot');
-  src: url('@{dirfont}/opensans-semibold.eot?#iefix') format('embedded-opentype'),
-  url('@{dirfont}/opensans-semibold.woff') format('woff'),
-  url('@{dirfont}/opensans-semibold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'OpenSansSemiboldItalic';
-  src: url('@{dirfont}/opensans-semibolditalic.eot');
-  src: url('@{dirfont}/opensans-semibolditalic.eot?#iefix') format('embedded-opentype'),
-  url('@{dirfont}/opensans-semibolditalic.woff') format('woff'),
-  url('@{dirfont}/opensans-semibolditalic.ttf') format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'OpenSansCondensedLight';
-  src: url('@{dirfont}/open_sans_condensed_light.eot');
-  src: url('@{dirfont}/open_sans_condensed_light.eot?#iefix') format('embedded-opentype'),
-  url('@{dirfont}/open_sans_condensed_light.woff') format('woff'),
-  url('@{dirfont}/open_sans_condensed_light.ttf') format('truetype'),
-  url('@{dirfont}/open_sans_condensed_light.svg#OpenSansCondensedLight') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 label, button{
   cursor: pointer;
 }
@@ -156,6 +36,7 @@ html {
 }
 
 body{
+  font-weight: 100;
   .center;
   font-family: @regular;
   font-size: 14px;
@@ -164,12 +45,14 @@ body{
 }
 
 h1, h2 {
+  font-weight: 100;
   font-family: @light;
   font-size: 24px;
   text-align: center;
 }
 
 h3 {
+  font-weight: 100;
   font-family: @bold;
   font-size: 18px;
   text-align: center;
@@ -180,6 +63,18 @@ h3 {
   display: table;
   height: 1px;
   clear: both;
+}
+
+.hide-desktop {
+  .hide;
+}
+
+.hide-mobile {
+  .hide;
+}
+
+.hide-tablet {
+  .hide;
 }
 
 .wrapper {
@@ -196,6 +91,10 @@ h3 {
   background-position: 50% 0;
   background-size: cover;
 
+  &--fix {
+    height: 230px;
+  }
+
   &-menu {
     background: rgba(0, 0, 0, 0.3); //Прозрачный фон
     height: 65px;
@@ -205,47 +104,83 @@ h3 {
 
       &-link {
         display: block;
-      }
+        fill: #fff;
 
-       &-tablet {
-          .hide;
+        &:hover {
+          fill: @color_serene;
         }
 
-      &-wrap {
-      padding-top: 20px;
-      position: absolute;
-      z-index: 3;
-      float: left;
+        &:active {
+          .opacity(0.3);
+        }
     }
-  }
+
+      &-tablet {
+        .hide;
+      }
+
+      &-wrap {
+        padding-top: 20px;
+        position: absolute;
+        z-index: 3;
+        float: left;
+      }
+    }
 
     &__nav-wrap {
       padding-top: 20px;
       float: right;
     }
 
-    &__open-btn {
-      .size(50px, 24px);
+    &__open-link {
       display: block;
-      background: url("@{dir}/menu-burger.svg")  no-repeat;
+      width: 100%;
+      height: 100%;
       fill: #fff;
+
+      &:hover {
+        fill: @color_serene;
+      }
+
+      &:active {
+        fill: @color_serene;
+        .opacity(0.3);
+      }
+    }
+
+      &__open-btn {
+        display: block;
+
+        &-link {
+          display: block;
+          width: 100%;
+          height: 100%;
+          fill: #fff;
+        }
     }
 
     &__popup {
-      width: 320px;
+      min-width: 100%;
       top: 0;
       z-index: 2;
       background-color: #283645;
       position: absolute;
       .hide;
 
-//-- Сделать правильно расположение
-      &-close {
+        &-close {
         display: block;
-        margin-left: 280px;
+        margin-left: 90%;
         margin-top: 20px;
         height: 45px;
-        background: url("@{dir}/btn_menu-close.png") no-repeat;
+        fill: #fff;
+
+        &:hover {
+          fill: @color_serene;
+        }
+
+        &:active {
+          .opacity(0.3);
+        }
       }
     }
   }
@@ -265,7 +200,7 @@ h3 {
     line-height: 1.3;
     padding-bottom: 25px;
     &--size {
-    padding-bottom: 28px+25px;
+      padding-bottom: 28px+25px;
     }
   }
   .title-br {
@@ -287,6 +222,10 @@ h3 {
       border: 3px solid #fff;
       margin-bottom: 20px;
 
+      &:hover {
+        background-color: #fff;
+      }
+
       &-link {
         padding-top: 12px;
         padding-bottom: 12px;
@@ -296,6 +235,14 @@ h3 {
         font-size: 18px;
         text-decoration: none;
         color: #fff;
+
+        &:hover {
+          color: @color_serene;
+        }
+
+        &:active {
+          .opacity(0.3);
+        }
       }
     }
     &__list {
@@ -328,18 +275,28 @@ h3 {
   padding: 0;
 
   &__item {
+    border-top: 1px solid #000;
+    box-shadow: 0px 1px 0px #485562 inset;
     text-align: center;
     border-top: 1px solid #000;
     height: 65px;
     line-height: 1.6;
 
     &-link {
-      padding-top: 19px;
-      .size(100%, 100%);
-      .inline-block();
-      text-decoration: none;
-      text-transform: uppercase;
-      color: #fff;
+    padding-top: 19px;
+    .size(100%, 100%);
+    .inline-block();
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+
+      &:hover {
+        color: @color_serene;
+      }
+
+      &:active {
+        .opacity(0.3);
+      }
     }
   }
 }
@@ -365,14 +322,14 @@ h3 {
 
     &__container {
       position: relative;
-       margin-bottom: 50px;
+      margin-bottom: 50px;
       background-color: @bg_block;
 
       &:before {
         content: '';
         position: absolute;
-        top: -70px;
-        width: 110%;
+        top: -60px;
+        width: 105%;
         height: 150px;
         background: @bg_block;
         -webkit-transform: rotate(-5.6deg);
@@ -413,11 +370,85 @@ h3 {
           display: none;
         }
       }
+
+      &-tablet {
+        .hide;
+      }
     }
   }
 
+  &-effect {
+    margin-bottom: 80px;
+    display: block;
+    height: 305px;
+
+    &__header {
+      width: 320px;
+      display: block;
+      float: right;
+
+      &-title {
+        font-family: @bold;
+        font-size: 30px;
+        text-align: left;
+      }
+
+      &-text {
+        text-align: left;
+
+        & a {
+          display: block;
+          padding-top: 20px;
+          color: @color_serene;
+        }
+      }
+    }
+
+    &__img{
+      float: left;
+      display: block;
+
+      &-text {
+        line-height: 1.6;
+        top: 74px;
+        left: 31px;
+        text-align: center;
+        display: block;
+        width: 200px;
+        height: 200px;
+        border: 10px solid @color_serene;
+        .rounded(100%);
+        font-family: OpenSansBold;
+        font-size: 104.6px;
+        position: absolute;
+        color: @color_serene;
+      }
+    }
+    &__wrap {
+      display: block;
+      width: 305px;
+      position: relative;
+    }
+  }
+  &-effect {
+    .hide;
+  }
+
+
   &-slider-reviews {
+    margin-bottom: 50px;
     padding-bottom: 40px;
+    &__item {
+      & span {
+        .hide;
+      }
+    }
+    &__header {
+
+      &--tablet {
+        .hide;
+      }
+    }
 
     &__text {
       text-align: center;
@@ -440,6 +471,7 @@ h3 {
 
       &--active {
         .size(11px, 11px);
+        background-color: #fff;
         border: 3px solid #283645;
       }
 
@@ -450,11 +482,27 @@ h3 {
   }
 
   &-price {
-    overflow: hidden;
-    padding-top: 90px;
+    padding-bottom: 10px;
+    position: relative;
+    margin-top: 20px;
+    padding-top: 30px;
     background-color: @bg_block;
 
+    &:before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      width: 105%;
+      height: 300px;
+      background: @bg_block;
+      -webkit-transform: rotate(-5.6deg);
+      -ms-transform: rotate(-5.6deg);
+      transform: rotate(-5.6deg);
+      z-index: -1;
+    }
+
     &__table {
+      overflow: hidden;
       margin-bottom: 40px;
       .center;
       border-collapse: collapse;
@@ -477,11 +525,11 @@ h3 {
         background-color: #283645;
         line-height: 1.5;
 
-         span {
-           display: block;
-           font-family: @light;
-           font-size: 24px;
-         }
+        span {
+          display: block;
+          font-family: @light;
+          font-size: 24px;
+        }
       }
 
       &-col {
@@ -490,21 +538,27 @@ h3 {
         border-left: 2px solid @bg_block;
         border-bottom: 2px solid @bg_block;
 
-        .position {
+        &-null {
+          .hide;
+        }
+
+        &--tablet {
+          .hide;
+        }
+
+       &-yes {
           top: 12px;
           right: 23px;
           position: absolute;
-        }
-
-        &-yes {
-          .position;
           background: url("@{dir}/yes.svg") no-repeat;
           fill: #3dc644;
           .size(29px, 22px);
         }
 
         &-no {
-          .position;
+          top: 12px;
+          right: 23px;
+          position: absolute;
           background: url("@{dir}/no.png") no-repeat;
           .size(26px, 26px);
         }
@@ -553,6 +607,7 @@ h3 {
     margin-bottom: 42px;
 
     &__header {
+      font-weight: 100;
       color: @color_text;
       text-align: center;
       line-height: 2;
@@ -604,11 +659,22 @@ h3 {
     background-color: @bg_block;
     margin-bottom: 55px;
 
+     & fieldset {
+       padding-top: 42px;
+     }
+
+    legend {
+      position: relative;
+      text-align: center;
+    }
     &__header {
+      text-align: center;
+      font-weight: 100;
       font-size: 14px;
+      font-family: @regular;
       text-transform: uppercase;
       color: @color_serene;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
 
     &__radio {
@@ -668,6 +734,7 @@ h3 {
     margin-bottom: 50px;
 
     &__title {
+      font-weight: 100;
       font-family: @regular;
       font-size: 14px;
       text-transform: uppercase;
@@ -735,6 +802,7 @@ h3 {
 
     &__title {
       font-family: @regular;
+      font-weight: 100;
       font-size: 14px;
       text-transform: uppercase;
       color: @color_serene;
@@ -801,6 +869,7 @@ h3 {
       }
 
       &-title {
+        font-weight: 100;
         font-family: @regular;
         font-size: 14px;
         padding-bottom: 15px;
@@ -829,13 +898,14 @@ h3 {
       }
 
       &-col-2 {
-         border:  2px solid #e5e5e5;
+        border:  2px solid #e5e5e5;
       }
     }
   }
 
   &-achievements {
     &__title {
+      font-weight: 100;
       font-family: @regular;
       font-size: 14px;
       padding-bottom: 35px;
@@ -953,7 +1023,7 @@ h3 {
             background: #e5e5e5;
             left: 12px;
             top: 5.5px;
-           }
+          }
 
           &:after {
             content: '';
@@ -1000,6 +1070,10 @@ h3 {
     padding-bottom: 40px;
   }
 
+  &__block {
+
+  }
+
   &__title {
     padding-bottom: 10px;
   }
@@ -1009,6 +1083,7 @@ h3 {
     font-family: @light;
     font-size: 24px;
     padding-bottom: 30px;
+    color: @color_serene;
 
     &-link {
       color: @color_serene;
@@ -1017,14 +1092,53 @@ h3 {
   }
 
   &__map {
-    .size(320px, 209px);
-    background: url("@{dir}/map.jpg");
+    position: relative;
+    display: block;
+
+    &--angle {
+        position: absolute;
+        top: -2px;
+        left: 0px;
+        right: 0px;
+        height: 70px;
+        fill: #FFF;
+        z-index: 50;
+    }
+
+    & iframe {
+      .size(100%, 209px);
+    }
   }
 
   &__img {
     display: block;
     .center;
     margin-bottom: 40px;
+
+    &-logo {
+      fill: @color_serene;
+    }
+
+    &-pink {
+      fill: @color_text;
+    }
+  }
+
+  &-logo-link {
+    .size(100%, 100%);
+    display: block;
+
+    &:hover .page-footer__img-pink{
+      fill: @color_serene;
+    }
+
+    &:active .page-footer__img-pink{
+      fill: @color_text;
+      .opacity(0.3);
+    }
+    &:active {
+      .opacity(0.3);
+    }
   }
 
   &__social {
@@ -1038,36 +1152,49 @@ h3 {
     &__item {
       margin-right: 15px;
       display: inline-block;
-      .rounded(50%);
       .size(50px, 50px);
-      border: 2px solid #e5e5e5;
+
+      &:active  {
+        .opacity(0.3);
+      }
 
       a{
+        padding-top: -10px;
         display: inline-block;
         .size(100%, 100%);
+        border: 2px solid #e5e5e5;
+        .rounded(50%);
+
+        &:hover {
+          border: 2px solid @color_text;
+        }
+
+        &:active {
+          .opacity(0.3);
+        }
       }
 
       &-tw {
-        background: url("@{dir}/ico_twitter.png") no-repeat;
+        background: url("@{dir}/twitter.svg") no-repeat;
         background-position: center;
       }
 
       &-fb {
-        background: url("@{dir}/ico_facebook.png") no-repeat;
+        background: url("@{dir}/facebook.svg") no-repeat;
         background-position: center;
       }
 
       &-inst {
-        background: url("@{dir}/ico_instagr.png") no-repeat;
+        background: url("@{dir}/youtube.svg") no-repeat;
         background-position: center;
       }
     }
   }
 
-.copyright {
-  margin-bottom: 50px;
-  text-align: center;
-}
+  .copyright {
+    margin-bottom: 50px;
+    text-align: center;
+  }
 
   &__developed {
     text-align: center;
@@ -1078,11 +1205,19 @@ h3 {
     vertical-align: top;
   }
 
-  &__logo-link {
-    .size(27px, 34px);
-    background: url("@{dir}/logo_html_academy.png") no-repeat;
+  &__copyright-link {
+    //background: url("@{dir}/htmlacademy.svg");
+    fill: @color_serene;
     display: inline-block;
     vertical-align: top;
+
+    &:hover {
+      fill: @color_text;
+    }
+
+    &:active {
+      .opacity(0.3);
+    }
   }
 }
 
@@ -1205,16 +1340,16 @@ h3 {
           color: @color_serene;
         }
 
-          &-list {
+        &-list {
           padding-left: 20px;
           color: @color_serene;
           list-style: disc;
-          }
+        }
 
         &-item {
           margin-bottom: 35px;
 
-         & span {
+          & span {
             color: @color_text;
           }
         }
@@ -1273,135 +1408,4 @@ h3 {
   }
 }
 
-
-// Планшетная версия
-@media(min-width: 700px) and (max-width: 992px) {
-  .page-header {
-    .img-retina('@{dir}/background-tablet@1x.jpg';'@{dir}/background-tablet@2x.jpg';'@{dir}/background-tablet@2x.jpg'; auto; 100%);
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-  }
-
-  body {
-    min-width: 700px;
-  }
-  //.wrapper {
-  //  width: 700px;
-  //}
-  .page-header-menu__logo-tablet  {
-    display: block;
-  }
-
-  .page-header-menu__logo-mobile {
-    .hide;
-  }
-  .page-header-menu__logo-wrap {
-    padding-top: 30px;
-  }
-
-  .page-header-menu {
-    height: 110px;
-  }
-
-  .wrapper {
-    width: 88.57%;
-  }
-
-  .page-header__bg-tablet {
-    .img-retina('@{dir}/iphone-hand-tablet@1x.png';'@{dir}/iphone-hand-tablet@2x.png';'@{dir}/iphone-hand-tablet@2x.png'; auto; 100%);
-    width: 700px;
-    height: 545px;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-    display: block;
-    //margin-left: 190px;
-    margin-top: 74px;
-
-  }
-
-  .page-header__bg-mobile {
-    .hide;
-  }
-
-  .page-header__title {
-    position: absolute;
-    font-size: 40px;
-    text-align: center;
-    display: inline-block;
-    color: #fff;
-    line-height: 1.3;
-    padding-bottom: 0;
-    margin-top: 80px;
-    .center;
-    padding-left: 80px;
-  }
-  .page-header__title .title-br {
-    display: block;
-  }
-
-  .page-header-download {
-    margin-top: 0;
-    position: absolute;
-    left: 0;
-    top: 400px;
-    margin-left: 40px;
-    display: block;
-    width: 280px;
-    background: none;
-
-    &_btn {
-      display: inline-block;
-      width: 280px;
-    }
-  }
-  .page-main-post__header {
-    font-size: 40px;
-    line-height: 1;
-
-    & span {
-      display: block;
-      padding-top: 7px;
-      line-height: 1.3;
-    }
-  }
-
-  .page-main-post {
-    &__wrap {
-    float: right;
-      text-align: left;
-      width: 320px;
-    }
-
-    &__container {}
-
-    &__case{
-      float: left;
-      width: 157px;
-      height: 278px;
-      .img-retina('@{dir}/iphone-case-mobile@1x.png';'@{dir}/iphone-case-mobile@2x.png';'@{dir}/iphone-case-mobile@3x.png'; auto; 100%);
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      background-size: cover;
-
-
-
-
-
-      &-img {
-        display: none;
-      }
-
-      &-img-tablet {
-
-      }
-    }
-    &__title {
-      text-align: left;
-    }
-    &__description {
-      text-align: left;
-    }
-  }
-}
+@import "media.less";
