@@ -149,22 +149,25 @@
       <div class="wrapper">
         <fieldset>
           <div class="wrapper-form">
-          <legend align="center"><h3 class="page-form-travel__title">Когда вы путешествовали? *</h3></legend>
+          <legend align="center">
+            <h3 class="page-form-travel__title page-form-travel__title--fix">Когда вы путешествовали? *</h3></legend>
         <div class="page-form-travel__form">
           <div class="page-form-travel__wrap">
           <input class="page-form-travel__form-field" type="text" name="travel__date__departure" value="1 апреля 2015">
           <h3 class="page-form-travel__title">Дата выезда</h3>
           </div>
           <div class="page-form-travel__form">
-          <button class="page-form-travel__form-btn">+</button>
-          <input class="page-form-travel__form-field page-form-travel__form-field--modern"  type="text" value="10 дней" name="travel__continuance">
           <button class="page-form-travel__form-btn">-</button>
+          <input class="page-form-travel__form-field page-form-travel__form-field--modern"  type="text" value="10 дней" name="travel__continuance">
+          <button class="page-form-travel__form-btn">+</button>
           <h3 class="page-form-travel__title">Продолжительность</h3>
           </div>
+          <div class="page-form-travel__wrap">
           <label>
             <input class="page-form-travel__form-field" type="text" name="travel__date_return" placeholder="1 апреля 2015">
             <h3 class="page-form-travel__title">Дата возвращения</h3>
           </label>
+          </div>
         </div>
           </div>
         </fieldset>
@@ -172,28 +175,34 @@
     </div>
     <div class="page-form-people">
       <div class="wrapper">
-        <h3 class="page-form-people__title">Количество попутчиков</h3>
+        <fieldset>
+          <div class="wrapper-form">
+          <legend align="center">
+        <h3 class="page-form-people__title">Количество попутчиков *</h3>
+          </legend>
         <div class="page-form-people__form">
-          <button class="page-form-people__form-btn" name="travel-people__plus">+</button>
+          <button class="page-form-people__form-btn" name="travel-people__plus">-</button>
           <input class="page-form-people__form-field page-form-people__form-field--modern" type="text" name="travel-people__continuance" value="2 чел">
-          <button class="page-form-people__form-btn clearfix" name="travel-people__minus">-</button>
+          <button class="page-form-people__form-btn clearfix" name="travel-people__minus">+</button>
           <table class="page-form-people__table">
             <tr>
               <th class="page-form-people__table-title">№</th>
               <th class="page-form-people__table-title">Имя:*</th>
+              <th></th>
             </tr>
             <tr>
-              <td class="page-form-people__table-col-1">1</td>
+              <td class="page-form-people__table-col-1 col-1--fix">1</td>
               <td class="page-form-people__table-col-2">
                 <input class="page-form-people__table-field" type="text" name="people__name" placeholder="Введите ваше имя">
               </td>
+              <td class="page-form-people__table-col-3"> <button class="page-form-people__form-btn-delete" name="people__delete">Удалить</button></td>
             </tr>
             <tr>
               <th class="page-form-people__table-title"></th>
               <th class="page-form-people__table-title">Прозвище</th>
             </tr>
             <tr>
-              <td class="page-form-people__table-col-1 page-form-people__table-col-null" ></td>
+              <td class="page-form-people__table-col-1 page-form-people__table-col-null col-1--fix"></td>
               <td class="page-form-people__table-col-2">
                 <input class="page-form-people__table-field" type="text" name="travel-people__nickname" placeholder="Ну как же без этого!">
               </td>
@@ -209,6 +218,7 @@
               <td class="page-form-people__table-col-2">
                 <input class="page-form-people__table-field" type="text" name="people__name" placeholder="Введите ваше имя">
               </td>
+              <td class="page-form-people__table-col-3"> <button class="page-form-people__form-btn-delete" name="people__delete">Удалить</button></td>
             </tr>
             <tr>
               <th class="page-form-people__table-title"></th>
@@ -222,6 +232,8 @@
             </tr>
           </table>
         </div>
+          </div>
+        </fieldset>
       </div>
     </div>
     <div class="page-form-achievements">
