@@ -454,8 +454,103 @@
   .page-form-people .wrapper fieldset {
     padding-bottom: 50px;
   }
-
+  .page-form-people__table-col-1 {
+    //border-right:  2px solid #e5e5e5;
+    font-size: 18px;
+    margin-right: 20px;
+}
   .col-1--fix {
     background-color: @bg_block;
+    border-right:  2px solid #e5e5e5;
     }
+
+  .page-form-people__table-title {
+    text-align: left;
+    padding-left: 20px;
+   }
+
+  .page-form-people__table-field {
+    font-size: 18px;
+  }
+
+  .col-1--border {
+    width: 20px;
+    display: block;
+  }
+
+  .br-none {
+    .hide;
+  }
+
+  .page-form-achievements__title {
+    position: relative;
+    top: -11px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #fff;
+    display: inline-block;
+  }
+
+  .page-form-photo {
+
+    &__wrap {
+    background: none;
+    }
+
+    &__title {
+      position: relative;
+      top: -11px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: #fff;
+      display: inline-block;
+    }
+  }
+
+  .page-form-photo__img-item {
+    margin-right: 60px;
+    & img {
+      .size(120px, 120px);
+    }
+  }
+
+  .page-form-photo__img-item--close {
+    .size(50px, 50px);
+    top: -25px;
+    left: 90px;
+
+
+    .plus-mixin {
+      .size(2px, 22px);
+      position: absolute;
+      background: #e5e5e5;
+      left: 22px;
+      top: 12px;
+    }
+
+    &:after {
+      content: '';
+      .rotate(45deg);
+      .plus-mixin;
+    }
+
+    &:before {
+      content: '';
+      .rotate(-45deg);
+      .plus-mixin;
+    }
+  }
+
+  .page-form-photo__btn {
+    width: 300px;
+  }
+
+  .page-form-photo__text {
+    display: inline-block;
+    margin-left: 150px;
+  }
+  //.page-footer__index {
+  //  display: block;
+  //}
+
 }

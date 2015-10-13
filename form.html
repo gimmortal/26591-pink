@@ -187,11 +187,13 @@
           <table class="page-form-people__table">
             <tr>
               <th class="page-form-people__table-title">№</th>
+              <th class="col-1--border"></th>
               <th class="page-form-people__table-title">Имя:*</th>
               <th></th>
             </tr>
             <tr>
               <td class="page-form-people__table-col-1 col-1--fix">1</td>
+              <td class="col-1--border"></td>
               <td class="page-form-people__table-col-2">
                 <input class="page-form-people__table-field" type="text" name="people__name" placeholder="Введите ваше имя">
               </td>
@@ -199,10 +201,12 @@
             </tr>
             <tr>
               <th class="page-form-people__table-title"></th>
+              <th class="col-1--border"></th>
               <th class="page-form-people__table-title">Прозвище</th>
             </tr>
             <tr>
-              <td class="page-form-people__table-col-1 page-form-people__table-col-null col-1--fix"></td>
+              <td class="page-form-people__table-col-1 page-form-people__table-col-null"></td>
+              <td class="col-1--border"></td>
               <td class="page-form-people__table-col-2">
                 <input class="page-form-people__table-field" type="text" name="travel-people__nickname" placeholder="Ну как же без этого!">
               </td>
@@ -211,10 +215,12 @@
           <table class="page-form-people__table page-form-people__table--none">
             <tr>
               <th class="page-form-people__table-title">№</th>
+              <td class="col-1--border"></td>
               <th class="page-form-people__table-title">Имя:*</th>
             </tr>
             <tr>
-              <td class="page-form-people__table-col-1">2</td>
+              <td class="page-form-people__table-col-1 col-1--fix">2</td>
+              <td class="col-1--border"></td>
               <td class="page-form-people__table-col-2">
                 <input class="page-form-people__table-field" type="text" name="people__name" placeholder="Введите ваше имя">
               </td>
@@ -222,10 +228,12 @@
             </tr>
             <tr>
               <th class="page-form-people__table-title"></th>
+              <th class="col-1--border"></th>
               <th class="page-form-people__table-title">Прозвище</th>
             </tr>
             <tr>
               <td class="page-form-people__table-col-1 page-form-people__table-col-null"></td>
+              <td class="col-1--border"></td>
               <td class="page-form-people__table-col-2">
                 <input class="page-form-people__table-field" type="text" name="travel-people__nickname" placeholder="Ну как же без этого!">
               </td>
@@ -237,7 +245,11 @@
       </div>
     </div>
     <div class="page-form-achievements">
-      <h3 class="page-form-achievements__title">Ваши безбашенные <br>достижения в путешествии</h3>
+      <div class="wrapper">
+        <fieldset>
+          <div class="wrapper-form">
+            <legend align="center">
+      <h3 class="page-form-achievements__title">Ваши безбашенные <br class="br-none">достижения в путешествии</h3></legend>
       <div class="page-form-achievements__form">
         <div class="page-form-achievements__form-wrap">
           <input class="page-form-achievements__form-check" id="selfie" type="checkbox" name="selfie" value="selfie" checked="">
@@ -264,11 +276,17 @@
           <label class="page-form-achievements__form-label" for="hotel">Разгромил отель</label>
         </div>
       </div>
+          </div>
+              </fieldset>
+          </div>
     </div>
     <div class="page-form-photo">
       <div class="page-form-photo__wrap">
-        <div class="wrapper">
-          <h3 class="page-form-photo__title">Ваши фотографии из поездки *</h3>
+         <div class="wrapper">
+           <fieldset>
+             <div class="wrapper-form">
+               <legend align="center">
+          <h3 class="page-form-photo__title">Ваши фотографии из поездки *</h3></legend>
           <button class="page-form-photo__btn">Загрузить фото</button>
           <hr>
           <ul class="page-form-photo__img">
@@ -313,6 +331,8 @@
               <p class="page-form-photo__img-item-title">img-8.jpg</p>
             </li>
           </ul>
+             </div>
+                 </fieldset>
         </div>
       </div>
       <div class="wrapper">
@@ -324,7 +344,6 @@
 </main>
 <!-- FOOTER -->
 <footer class="page-footer">
-    <div class="page-footer__block">
       <div class="wrapper">
         <a href="#" class="page-footer-logo-link">
           <svg class="page-footer__img" width="145" height="40" viewBox="0 0 146 41">
@@ -388,7 +407,6 @@
           </a>
         </div>
       </div>
-    </div>
 </footer>
 </body>
 
