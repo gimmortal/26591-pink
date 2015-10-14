@@ -639,7 +639,7 @@
   }
 
   .wrapper {
-    width: 80%;
+    width: 960px;
     .center;
   }
 
@@ -709,8 +709,9 @@
   .page-main-post {
 
     &__item {
-      margin-right: 8.7%;
-      width: 250px;
+      vertical-align: text-top;
+      margin-right: 20px;
+      width: 290px;
       display: inline-block;
 
       &:last-child {
@@ -723,11 +724,12 @@
     }
 
     &__container {
-
+      margin-bottom: 0;
+      padding-bottom: 50px;
 
       &:before {
         background: #fff;
-         top: -120px;
+        top: -120px;
         height: 200px;
         z-index: 1;
       }
@@ -749,31 +751,54 @@
     }
 
     &__title {
+      line-height: 1.2;
       position: relative;
-      display: block;
       font-size: 30px;
       text-align: center;
     }
+
     &__description {
       font-size: 18px;
       text-align: center;
     }
   }
   .page-main-effect {
+    height: 420px;
+    background-color: @bg_block;
     display:block;
 
     &__wrap {
       float: left;
+      margin-right: 65px;
     }
 
     &__header {
       float: left;
       display: block;
-      min-width: 45%;
+      width: 540px;
+      padding-top: 40px;
+
+
+    }
+    &__header-text {
+      font-size: 18px;
+    }
+
+    .page-main-effect__img {
+      width: 300px;
+      height: 346px;
+
+      &-text {
+        top: 87px;
+        left: 39px;
+        .size(220px, 220px);
+        font-size: 120px;
+      }
+
     }
 
     &__header-title {
-      padding-top: 40px;
+       padding-top: 40px;
 
       & br {
         .hide;
