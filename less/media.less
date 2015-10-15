@@ -55,7 +55,7 @@
   }
 
   .wrapper {
-    width: 88.57%;
+    width: 620px;
     .center;
   }
 
@@ -228,7 +228,8 @@
         position: relative;
 
         &--tablet {
-          border-top: 2px solid @bg_block;
+          border-top: 2px solid #e5e5e5;
+          border-left: 2px solid #e5e5e5;
           text-transform: uppercase;
           display: block;
           padding: 20px 0 20px 20px;
@@ -239,27 +240,27 @@
         }
 
         &-null {
+          background-color: @bg_block;
           display: block;
         }
 
         &-yes {
-          margin: auto;
+          vertical-align: top;
+          .center;
           position: relative;
-          text-align: center;
           display: block;
         }
 
         &-no {
-          margin: auto;
+          .center;
           position: relative;
-          text-align: center;
           display: block;
         }
       }
     }
   }
   .page-main-price__wrap {
-    width: 88.57%;
+    width: 620px;
     .center;
   }
 
@@ -271,6 +272,7 @@
 
     }
     &__header {
+      color: @color_text;
       font-size: 40px;
     }
 
@@ -279,7 +281,15 @@
       text-align: center;
       padding-right: 80px;
 
+      &--center {
+        display: block;
+      }
+
       &:last-child {
+        padding-right: 0;
+      }
+
+      &:nth-child(2n) {
         padding-right: 0;
       }
 
@@ -807,10 +817,74 @@
   }
 
   .page-main-slider-reviews {
+      &:before {
+      margin-bottom: 60px;
+      content: '';
+      text-align: center;
+      display: block;
+      .size(78px, 64px);
+      .center;
+      background: url("@{dir}/quotes.svg") no-repeat;
+    }
+
+    &__controls {
+      .hide;
+    }
+
+    &__text {
+      width: 780px;
+      .center;
+    }
+
+    .reviews-prev {
+      top: 6%;
+      border: none;
+      text-transform: none;
+      position: absolute;
+      .opacity(0.3);
+      .size(22px, 42px);
+      display: block;
+      background: url("@{dir}/review-arrow-left.svg");
+
+      &:hover {
+        .opacity(0.6);
+      }
+
+      &:active {
+        .opacity(0.1);
+      }
+    }
+    .wrapper-reviews {
+      position: relative;
+      .center;
+      width: 960px;
+    }
+
+    .reviews-next {
+      top: 6%;
+      right: 14px;
+      border: none;
+      text-transform: none;
+      position: absolute;
+      .opacity(0.3);
+      .size(22px, 42px);
+      display: block;
+      background: url("@{dir}/review-arrow-right.svg");
+
+      &:hover {
+        .opacity(0.6);
+      }
+
+      &:active {
+        .opacity(0.1);
+      }
+    }
+
     &__item {
 
-      & span {
+       & span {
         margin-bottom: 40px;
+        font-size: 18px;
         text-align: center;
         display: block;
       }
@@ -824,7 +898,7 @@
         display: block;
         margin-bottom: 5px;
         font-family: @bold;
-        font-size: 20px;
+        font-size: 24px;
       }
     }
     &__text {
@@ -843,6 +917,7 @@
     }
 
     &__table {
+      width: 100%;
       &-header {
         width: 180px;
       }
@@ -886,11 +961,19 @@
     }
   }
   .page-main-price__wrap {
-    width: 88.57%;
+    width: 960px;
     .center;
   }
 
   .page-footer {
+
+    &__map {
+
+      & iframe {
+      height: 375px;
+      }
+    }
+
     &__text {
 
     }
@@ -898,13 +981,14 @@
 
     }
     &__header {
-      font-size: 40px;
+      font-size: 50px;
     }
 
     &__wrap {
+      vertical-align: top;
       display: inline-block;
       text-align: center;
-      padding-right: 80px;
+      padding-right: 100px;
 
       &:last-child {
         padding-right: 0;
@@ -913,16 +997,15 @@
       &-center {
         display: block;
         text-align: center;
-
       }
     }
+
     &__block {
       padding-top: 30px;
       padding-bottom: 30px;
       .center;
-
+      text-align: center;
       display: block;
-      height: 127px;
     }
     //&-logo-link {
     //  display: block;
@@ -934,12 +1017,15 @@
     }
 
     &__social {
+
+      float: left;
       padding-left: 60px;
       padding-right: 60px;
-      float: left;
       display: block;
 
       &-list {
+        padding-left: 50%;
+
         //padding-left: 40px;
         //padding-right: 40px;
         display: block;
@@ -950,7 +1036,7 @@
 
     .copyright {
       display: block;
-      float: left;
+      float: right;
     }
   }
 

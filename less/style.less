@@ -489,6 +489,13 @@ h3 {
       }
     }
   }
+  .reviews-prev {
+    .hide;
+  }
+
+  .reviews-next {
+    .hide;
+  }
 
   &-price {
     padding-bottom: 10px;
@@ -524,8 +531,8 @@ h3 {
 
       &-title {
         position: relative;
-        border-left: 2px solid @bg_block;
-        border-right: 2px solid @bg_block;
+        border-left: 2px solid #e5e5e5;
+        border-right: 2px solid #e5e5e5;
         padding-top: 15px;
         padding-bottom: 15px;
         color: #fff;
@@ -542,10 +549,11 @@ h3 {
       }
 
       &-col {
+        border-right: 2px solid #e5e5e5;
         position: relative;
         padding: 20px 0 20px 20px;
-        border-left: 2px solid @bg_block;
-        border-bottom: 2px solid @bg_block;
+        border-left: 2px solid #e5e5e5;
+        border-bottom: 2px solid #e5e5e5;
 
         &-null {
           .hide;
@@ -1090,6 +1098,7 @@ h3 {
 
 .page-footer {
   &__header {
+    color: @color_text;
     line-height: 1.5;
     padding-bottom: 40px;
   }
