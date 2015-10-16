@@ -313,8 +313,6 @@ h3 {
 }
 
 .page-main {
-  margin-bottom: 50px;
-
   &-post {
     &__wrap {
       display: block;
@@ -456,25 +454,19 @@ h3 {
     .hide;
   }
 
-  &-slider-reviews
-
-   .rapper-reviews {
-    width: 280px;
-    .center;
-  }
-
-
-
-  {
+  &-slider-reviews {
     padding-top: 44px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     padding-bottom: 40px;
     &__item {
       & span {
         .hide;
       }
     }
+
     &__header {
+
+      margin-bottom: 16px;
 
       &--tablet {
         .hide;
@@ -483,8 +475,8 @@ h3 {
 
     &__text {
       text-align: center;
-      padding-bottom: 40px;
-      line-height: 1.8;
+      padding-bottom: 30px;
+      line-height: 2.1;
     }
 
     &__controls {
@@ -492,7 +484,7 @@ h3 {
     }
 
     &__control {
-      margin-right: 20px;
+      margin-right: 10px;
       .size(11px, 11px);
       display: inline-block;
       .rounded(100%);
@@ -501,7 +493,7 @@ h3 {
       border: 3px solid #fff;
 
       &--active {
-        .size(11px, 11px);
+        .size(12px, 12px);
         background-color: #fff;
         border: 3px solid #283645;
       }
@@ -523,8 +515,13 @@ h3 {
     padding-bottom: 10px;
     position: relative;
     margin-top: 20px;
-    padding-top: 30px;
+    padding-top: 17px;
     background-color: @bg_block;
+
+    &__wrap {
+      display: block;
+
+    }
 
     &:before {
       content: '';
@@ -541,13 +538,14 @@ h3 {
 
     &__table {
       overflow: hidden;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       .center;
       border-collapse: collapse;
       background-color: #fff;
       text-transform: uppercase;
 
       &-header {
+        display: block;
         width: 280px;
       }
 
@@ -555,7 +553,7 @@ h3 {
         position: relative;
         border-left: 2px solid #e5e5e5;
         border-right: 2px solid #e5e5e5;
-        padding-top: 15px;
+        padding-top: 20px;
         padding-bottom: 15px;
         color: #fff;
         font-family: @bold;
@@ -586,8 +584,8 @@ h3 {
         }
 
        &-yes {
-          top: 12px;
-          right: 23px;
+          top: 20px;
+          right: 22px;
           position: absolute;
           background: url("@{dir}/yes.svg") no-repeat;
           fill: #3dc644;
@@ -595,7 +593,7 @@ h3 {
         }
 
         &-no {
-          top: 12px;
+          top: 14px;
           right: 23px;
           position: absolute;
           background: url("@{dir}/no.png") no-repeat;
@@ -618,7 +616,7 @@ h3 {
     }
 
     &__control {
-      margin-right: 15px;
+      margin-right: 10px;
       .size(11px, 11px);
       display: inline-block;
       .rounded(100%);
@@ -627,7 +625,7 @@ h3 {
       cursor: pointer;
 
       &--active {
-        .size(11px, 11px);
+        .size(12px, 12px);
         border: 3px solid #283645;
       }
 
@@ -1119,10 +1117,14 @@ h3 {
 }
 
 .page-footer {
+  padding-top: 24px;
+
   &__header {
+    padding-left: 2px;
+    //letter-spacing: 0.1px;
     color: @color_text;
-    line-height: 1.5;
-    padding-bottom: 40px;
+    line-height: 1.2;
+    margin-bottom: 34px;
   }
 
   &__block {
@@ -1130,15 +1132,27 @@ h3 {
   }
 
   &__title {
-    padding-bottom: 10px;
-  }
+    color: @color_text;
+   }
 
   &__text {
+    //padding-left: 1px;
     text-align: center;
     font-family: @light;
     font-size: 24px;
-    padding-bottom: 30px;
+    line-height: 1.2;
+    padding-bottom: 18px;
     color: @color_serene;
+
+    &-email {
+      color: @color_serene;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        color: @color_text;
+      }
+    }
 
     &-link {
       color: @color_serene;
@@ -1467,4 +1481,4 @@ h3 {
   }
 }
 
-@import "media.less";
+//@import "media.less";
