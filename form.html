@@ -175,19 +175,25 @@
       <div class="wrapper">
         <h4 class="page-form-history__header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</h4>
         <div class="page-form-history__form">
+          <div class="history__form-wrap">
           <label class="page-form-history__form-title" for="name_field">
             Имя:*
           </label>
           <input class="page-form-history__form-field" type="text" name="name" id="name_field" placeholder="Введите ваше имя">
+          </div>
+          <div class="history__form-wrap">
           <label class="page-form-history__form-title" for="family_field">
             Фамилия:*
           </label>
           <input class="page-form-history__form-field" type="text" name="family" id="family_field" placeholder="Укажите фамилию">
-          <label class="page-form-history__form-title" for="surname_field">
+          </div>
+          <div class="history__form-wrap">
+            <label class="page-form-history__form-title" for="surname_field">
             Отчество:
           </label>
           <input class="page-form-history__form-field" type="text" name="surname" id="surname_field" placeholder="Ну и отчество тоже">
-        </div>
+          </div>
+          </div>
       </div>
     </div>
     <div class="page-form-apptravel">
@@ -222,18 +228,22 @@
           <input class="page-form-travel__form-field" type="text" name="travel__date__departure" value="1 апреля 2015">
           <h3 class="page-form-travel__title mod">Дата выезда</h3>
           </div>
-          <div class="page-form-travel__form">
+          <!--<div class="page-form-travel__form">-->
+          <div class="page-form-travel__wrap">
           <button class="page-form-travel__form-btn"><span class="position-minus">&#8211;</span></button>
           <input class="page-form-travel__form-field page-form-travel__form-field--modern"  type="text" value="10 дней" name="travel__continuance">
           <button class="page-form-travel__form-btn"><span class="position-plus">+</span></button>
           <h3 class="page-form-travel__title">Продолжительность</h3>
           </div>
+          <!--</div>-->
+
           <div class="page-form-travel__wrap">
           <label>
             <input class="page-form-travel__form-field" type="text" name="travel__date_return" placeholder="1 апреля 2015">
             <h3 class="page-form-travel__title mod">Дата возвращения</h3>
           </label>
           </div>
+
         </div>
           </div>
         </fieldset>

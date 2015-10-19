@@ -1353,6 +1353,14 @@
     padding-left: 0;
     font-size: 50px;
   }
+  .history__form-wrap {
+    display: inline-block;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
   .page-header__title {
     text-align: center;
@@ -1361,7 +1369,6 @@
       width: 100%;
     }
   }
-
 
   .title-br {
     text-align: center;
@@ -1373,7 +1380,11 @@
   }
 
   .page-form-history {
-    margin-bottom: 39px;
+    margin-bottom: 16px;
+
+    &__form-field {
+      width: 300px;
+    }
   }
 
   .page-form-history__header {
@@ -1382,8 +1393,8 @@
     font-size: 18px;
     .center;
     line-height: 1.7;
-    width: 500px;
-    margin-bottom: 41px;
+    width: 760px;
+    margin-bottom: 71px;
   }
 
   .page-form-apptravel {
@@ -1398,6 +1409,19 @@
     }
     &__radio {
       left: 34px;
+
+      &-wrap {
+        display: inline-block;
+        margin-right: 121px;
+
+        &:nth-child(2n) {
+          margin-right: 94px;
+        }
+
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
     }
 
     &__header {
@@ -1420,13 +1444,13 @@
     border: 2px solid @bg_block;
   }
   .wrapper-form {
-    width: 500px;
+    width: 100%;
     //width: 71.42857142%;
     .center;
   }
 
   .page-form-travel {
-    margin-bottom: 33px;
+    margin-bottom: 14px;
 
     & fieldset {
       padding-bottom: 5px;
@@ -1441,10 +1465,16 @@
     width: 116px;
   }
   .page-form-travel__wrap {
-    float: left;
+    display: inline-block;
+    margin-right: 45px;
 
     &:first-child {
-      margin-right: 20px;
+      margin-left: 60px;
+    }
+
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 
