@@ -902,7 +902,7 @@ h3 {
   }
 
   &-people {
-    padding-bottom: 54px;
+    padding-bottom: 32px;
     background-color: @bg_block;
     padding-top: 34px;
     margin-bottom: 44px;
@@ -918,6 +918,17 @@ h3 {
       padding-bottom: 5px;
       border: 2px solid #e5e5e5;
       border-right: none;
+
+      //&:nth-child(2n) {
+      //  margin-left: 10px;
+      //}
+    }
+
+    .line-fix::after {
+      content: '';
+      display: table;
+      height: 1px;
+      clear: both;
     }
 
       &__title {
@@ -961,6 +972,10 @@ h3 {
         padding-bottom: 5px;
         background-color: #fff;
         border: 2px solid #e5e5e5;
+
+        &-delete {
+          .hide;
+        }
 
         &:hover {
           border: 2px solid @color_text;
@@ -1016,8 +1031,26 @@ h3 {
       width: 100%;
       padding-top: 33px;
 
+      &-null {
+        border-top: none;
+      }
+
+      &-nik {
+        display: block;
+        margin-left: 60px;
+        padding-top: 28px;
+        padding-bottom: 13px;
+      }
+
+
+      &-nik .page-form-people__table-title{
+       padding-top: 20px;
+
+      }
+
+
       &-line {
-        display: inline-block;
+        display: block;
         float: left;
       }
 

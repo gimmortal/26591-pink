@@ -580,6 +580,32 @@
   .page-form-people {
     background: none;
     margin-bottom: 5px;
+    padding-bottom: 51px;
+
+    .line-fix::after {
+      content: '';
+      display: inline;
+      height: 0px;
+      clear: none;
+    }
+
+    &__btn {
+      border-right: 2px solid #e5e5e5;
+      margin-right: 20px;
+    }
+  }
+  .hide-all {
+    .hide;
+  }
+
+  .line-fix::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .hide-desktop {
+    display: block;
   }
 
   .page-form-people__title {
@@ -591,6 +617,12 @@
     display: inline-block;
     margin-bottom: 21px;
   }
+
+  .page-form-people__table-nik {
+    margin-bottom: -10px;
+    margin-left: 80px;
+  }
+
   .page-form-people__form-field--modern {
     background: none;
     border-top: none;
@@ -610,8 +642,11 @@
     text-transform: uppercase;
     border: none;
     font-family: @regular;
-    margin-left: 50px;
     margin-top: 20px;
+    display: inline-block;
+    float: right;
+    padding-top: 30px;
+    padding-left: 10px;
   }
 
   .page-form-people__form-field {
@@ -646,6 +681,8 @@
 
   .page-form-people__table-field {
     font-size: 18px;
+    width: 300px;
+
   }
 
   .col-1--border {
@@ -1506,11 +1543,34 @@
     display: inline-block;
   }
 
-  .page-form-people {
-    background: none;
-    margin-bottom: 5px;
+  .page-form-people__table-nik {
+    padding-left: 20px;
+    margin-left: 0;
+    float: left;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
+
+  .page-form-people {
+    background: none;
+    margin-bottom: 43px;
+
+    .line-fix::after {
+      content: '';
+      display: inline;
+      height: 0px;
+      clear: none;
+    }
+
+    &__btn {
+      border-right: 2px solid #e5e5e5;
+      margin-right: 20px;
+    }
+  }
+.hide-desktop {
+  .hide;
+}
   .page-form-people__title {
     position: relative;
     top: -11px;
@@ -1520,6 +1580,12 @@
     display: inline-block;
     margin-bottom: 21px;
   }
+
+  .page-form-people__form .wrapper-people {
+    .center;
+    width: 820px;
+  }
+
   .page-form-people__form-field--modern {
     background: none;
     border-top: none;
@@ -1533,14 +1599,18 @@
     display: block;
     width: 100px;
   }
+
   .page-form-people__form-btn-delete {
     color: @color_text;
     background: none;
     text-transform: uppercase;
     border: none;
     font-family: @regular;
-    margin-left: 50px;
     margin-top: 20px;
+    display: inline-block;
+    float: right;
+    padding-top: 30px;
+    padding-left: 10px;
   }
 
   .page-form-people__form-field {
@@ -1551,7 +1621,7 @@
   }
 
   .page-form-people__table {
-    margin-bottom: 7px;
+    margin-bottom: -7px;
   }
 
   .page-form-people__table-col-2 {
@@ -1570,11 +1640,12 @@
 
   .page-form-people__table-title {
     text-align: left;
-    padding-left: 20px;
+    padding-left: 26px;
   }
 
   .page-form-people__table-field {
     font-size: 18px;
+    width: 300px;
   }
 
   .col-1--border {
@@ -1584,6 +1655,10 @@
 
   .br-none {
     .hide;
+  }
+  .page-form-achievements__form .wrapper-achiev {
+    width: 820px;
+    .center;
   }
 
   .page-form-achievements__title {
@@ -1597,6 +1672,19 @@
     padding-bottom: 37px;
   }
 
+  .page-form-achievements__form-col {
+    display: inline-block;
+    margin-right: 25px;
+
+    &:nth-child(2n) {
+      margin-right: 12px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   .page-form-photo {
 
     & hr {
@@ -1605,7 +1693,7 @@
 
     &__wrap {
       background: none;
-      padding-top: 65px;
+      padding-top: 74px;
       margin-bottom: 46px;
       padding-bottom: 10px;
     }
@@ -1620,10 +1708,18 @@
       display: inline-block;
     }
   }
+  .wrqpper-photo {
+    .center;
+    width: 820px;
+  }
 
   .page-form-photo__img-item {
     margin-bottom: 53px;
-    margin-right: 66px;
+    margin-right: 41px;
+
+      &:nth-child(3n) {
+        margin-right: 41px;
+      }
 
     & img {
       .size(120px, 120px);
@@ -1661,11 +1757,44 @@
   .page-form-photo__btn {
     width: 100%;
     margin-bottom: 43px;
+    .opacity(0.82);
+    color: #fff;
+
+      border: 2px solid @color_serene;
+      background-color: @color_serene;
+      .opacity(0.82);
+
+      &:hover {
+        border: 2px solid @color_serene;
+        background-color: @color_serene;
+        .opacity(1);
+      }
+
+      &:active {
+        border: 2px solid @color_serene;
+        background-color: @color_serene;
+        color:rgba(255, 255, 255, 0.3);
+      }
 
     &--green {
       margin-bottom: 0;
       float: left;
       width: 300px;
+      border: 2px solid #2aab6d;
+      background-color: #2aab6d;
+      .opacity(0.82);
+
+      &:hover {
+        border: 2px solid #2aab6d;
+        background-color: #2aab6d;
+        .opacity(1);
+      }
+
+      &:active {
+        border: 2px solid #2aab6d;
+        background-color: #2aab6d;
+        color:rgba(255, 255, 255, 0.3);
+      }
     }
   }
 

@@ -257,57 +257,59 @@
         <h3 class="page-form-people__title">Количество попутчиков *</h3>
           </legend>
         <div class="page-form-people__form">
+          <div class="wrapper-people">
           <button class="page-form-people__form-btn" name="travel-people__minus"><span class="position-minus">&#8211;</span></button>
           <input class="page-form-people__form-field page-form-people__form-field--modern" type="text" name="travel-people__continuance" value="2 чел">
           <button class="page-form-people__form-btn clearfix" name="travel-people__plus"><span class="position-plus">+</span></button>
-          <div class="page-form-people__table">
 
-            <div class="page-form-people__table-wrap">
+          <div class="page-form-people__table">
+            <div class="page-form-people__table-wrap line-fix">
            <div class="page-form-people__table-line">
             <span class="page-form-people__table-title">№</span>
             <button class="page-form-people__btn">1</button>
            </div>
               <div class="page-form-people__table-line">
             <label class="page-form-people__table-title" for="people__name">Имя:*</label>
-              <input class="page-form-people__table-field" type="text" name="people__name" id="people__name" placeholder="Введите ваше имя">
+              <input class="page-form-people__table-field" type="text" name="people__name" id="people_name" placeholder="Введите ваше имя">
             </div>
             </div>
-              <div class="page-form-people__table-wrap">
+              <div class="page-form-people__table-wrap  clearfix hide-desktop">
               <button class="page-form-people__form-btn-delete" name="people__delete">Удалить</button>
               </div>
-            <div class="page-form-people__table-wrap">
+            <div class="page-form-people__table-nik">
               <label class="page-form-people__table-title" for="people__nickname">Прозвище</label>
-              <input class="page-form-people__table-field" type="text" name="people__nickname" id="people__nickname" placeholder="Ну как же без этого!">
+              <input class="page-form-people__table-field" type="text" name="people__nickname" id="people_nickname" placeholder="Ну как же без этого!">
           </div>
+            <div class="page-form-people__table-wrap hide-all clearfix">
+              <button class="page-form-people__form-btn-delete" name="people__delete">Удалить</button>
+            </div>
           </div>
 
-          <table class="page-form-people__table page-form-people__table--none">
-            <tr>
-              <th class="page-form-people__table-title">№</th>
-              <td class="col-1--border"></td>
-              <th class="page-form-people__table-title">Имя:*</th>
-            </tr>
-            <tr>
-              <td class="page-form-people__table-col-1 col-1--fix">2</td>
-              <td class="col-1--border"></td>
-              <td class="page-form-people__table-col-2">
-                <input class="page-form-people__table-field" type="text" name="people__name" placeholder="Введите ваше имя">
-              </td>
-              <td class="page-form-people__table-col-3"> <button class="page-form-people__form-btn-delete" name="people__delete">Удалить</button></td>
-            </tr>
-            <tr>
-              <th class="page-form-people__table-title"></th>
-              <th class="col-1--border"></th>
-              <th class="page-form-people__table-title">Прозвище</th>
-            </tr>
-            <tr>
-              <td class="page-form-people__table-col-1 page-form-people__table-col-null"></td>
-              <td class="col-1--border"></td>
-              <td class="page-form-people__table-col-2">
-                <input class="page-form-people__table-field" type="text" name="travel-people__nickname" placeholder="Ну как же без этого!">
-              </td>
-            </tr>
-          </table>
+          <div class="page-form-people__table page-form-people__table-null ">
+            <div class="wrapper-people">
+            <div class="page-form-people__table-wrap line-fix">
+              <div class="page-form-people__table-line">
+                <span class="page-form-people__table-title">№</span>
+                <button class="page-form-people__btn">2</button>
+              </div>
+              <div class="page-form-people__table-line">
+                <label class="page-form-people__table-title" for="people__name">Имя:*</label>
+                <input class="page-form-people__table-field" type="text" name="people__name" id="people__name" placeholder="Введите ваше имя">
+              </div>
+            </div>
+            <div class="page-form-people__table-wrap clearfix hide-desktop">
+              <button class="page-form-people__form-btn-delete" name="people__delete">Удалить</button>
+            </div>
+            <div class="page-form-people__table-nik">
+              <label class="page-form-people__table-title" for="people__nickname">Прозвище</label>
+              <input class="page-form-people__table-field" type="text" name="people__nickname" id="people__nickname" placeholder="Ну как же без этого!">
+            </div>
+              <div class="page-form-people__table-wrap hide-all clearfix">
+                <button class="page-form-people__form-btn-delete" name="people__delete">Удалить</button>
+              </div>
+            </div>
+           </div>
+        </div>
         </div>
           </div>
         </fieldset>
@@ -320,6 +322,8 @@
             <legend align="center">
       <h3 class="page-form-achievements__title">Ваши безбашенные достижения в путешествии</h3></legend>
       <div class="page-form-achievements__form">
+      <div class="wrapper-achiev">
+        <div class="page-form-achievements__form-col">
         <div class="page-form-achievements__form-wrap">
           <input class="page-form-achievements__form-check" id="selfie" type="checkbox" name="selfie" value="selfie" checked="">
           <label class="page-form-achievements__form-label" for="selfie">Сделал селфи с акулой</label>
@@ -328,6 +332,8 @@
           <input class="page-form-achievements__form-check" id="burned" type="checkbox" name="burned" value="burned" checked="">
           <label class="page-form-achievements__form-label" for="burned">Обгорел на пляже</label>
         </div>
+        </div>
+        <div class="page-form-achievements__form-col">
         <div class="page-form-achievements__form-wrap">
           <input class="page-form-achievements__form-check" id="Chuck" type="checkbox" name="Chuck" value="Chuck">
           <label class="page-form-achievements__form-label" for="Chuck">Видел Чака Норриса</label>
@@ -336,6 +342,8 @@
           <input class="page-form-achievements__form-check" id="souvenirs" type="checkbox" name="souvenirs" value="souvenirs">
           <label class="page-form-achievements__form-label" for="souvenirs">Накупил сувениров</label>
         </div>
+        </div>
+          <div class="page-form-achievements__form-col">
         <div class="page-form-achievements__form-wrap">
           <input class="page-form-achievements__form-check" id="tower" type="checkbox" name="tower" value="tower" checked="">
           <label class="page-form-achievements__form-label" for="tower">Удержал башню</label>
@@ -344,6 +352,8 @@
           <input class="page-form-achievements__form-check" id="hotel" type="checkbox" name="hotel" value="hotel">
           <label class="page-form-achievements__form-label" for="hotel">Разгромил отель</label>
         </div>
+          </div>
+      </div>
       </div>
           </div>
               </fieldset>
@@ -356,7 +366,8 @@
              <div class="wrapper-form">
                <legend align="center">
           <h3 class="page-form-photo__title">Ваши фотографии из поездки *</h3></legend>
-          <button class="page-form-photo__btn">Загрузить фото</button>
+          <div class="wrqpper-photo">
+               <button class="page-form-photo__btn">Загрузить фото</button>
           <hr>
           <ul class="page-form-photo__img">
             <li class="page-form-photo__img-item">
@@ -401,8 +412,9 @@
             </li>
           </ul>
              </div>
+             </div>
                  </fieldset>
-        </div>
+            </div>
       </div>
       <div class="wrapper clearfix">
         <button class="page-form-photo__btn page-form-photo__btn--green">Отправить форму</button>
