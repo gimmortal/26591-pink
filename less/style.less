@@ -907,7 +907,21 @@ h3 {
     padding-top: 34px;
     margin-bottom: 44px;
 
+    &__btn {
+      margin-top: 8px;
+      display: block;
+      color: @color_text;
+      .size(60px, 60px);
+      padding: 0;
+      font-size: 18px;
+      line-height: 1;
+      padding-bottom: 5px;
+      border: 2px solid #e5e5e5;
+      border-right: none;
+    }
+
       &__title {
+        display: block;
       font-family: @regular;
       font-weight: 100;
       font-size: 14px;
@@ -925,7 +939,6 @@ h3 {
         .size(100%, 60px);
         border: 2px solid #e5e5e5;
         margin-bottom: 50px;
-
 
           &--modern {
           background-color: @bg_block;
@@ -1001,7 +1014,12 @@ h3 {
       display: inline-block;
       border-top:  2px solid #e5e5e5;
       width: 100%;
-      padding-top: 9px;
+      padding-top: 33px;
+
+      &-line {
+        display: inline-block;
+        float: left;
+      }
 
       &--none {
         border-top: 0;
@@ -1032,10 +1050,10 @@ h3 {
       }
 
       &-field {
+        margin-top: 8px;
         padding-right: 25px;
         padding-left: 25px;
-        .size(100%, 60px);
-        border: none;
+        .size(216px, 60px);
         border:  2px solid #e5e5e5;
 
         &:hover {

@@ -260,34 +260,27 @@
           <button class="page-form-people__form-btn" name="travel-people__minus"><span class="position-minus">&#8211;</span></button>
           <input class="page-form-people__form-field page-form-people__form-field--modern" type="text" name="travel-people__continuance" value="2 чел">
           <button class="page-form-people__form-btn clearfix" name="travel-people__plus"><span class="position-plus">+</span></button>
-          <table class="page-form-people__table">
-            <tr>
-              <th class="page-form-people__table-title">№</th>
-              <th class="col-1--border"></th>
-              <th class="page-form-people__table-title">Имя:*</th>
-              <th></th>
-            </tr>
-            <tr>
-              <td class="page-form-people__table-col-1 col-1--fix">1</td>
-              <td class="col-1--border"></td>
-              <td class="page-form-people__table-col-2">
-                <input class="page-form-people__table-field" type="text" name="people__name" placeholder="Введите ваше имя">
-              </td>
-              <td class="page-form-people__table-col-3"> <button class="page-form-people__form-btn-delete" name="people__delete">Удалить</button></td>
-            </tr>
-            <tr>
-              <th class="page-form-people__table-title"></th>
-              <th class="col-1--border"></th>
-              <th class="page-form-people__table-title">Прозвище</th>
-            </tr>
-            <tr>
-              <td class="page-form-people__table-col-1 page-form-people__table-col-null"></td>
-              <td class="col-1--border"></td>
-              <td class="page-form-people__table-col-2">
-                <input class="page-form-people__table-field" type="text" name="travel-people__nickname" placeholder="Ну как же без этого!">
-              </td>
-            </tr>
-          </table>
+          <div class="page-form-people__table">
+
+            <div class="page-form-people__table-wrap">
+           <div class="page-form-people__table-line">
+            <span class="page-form-people__table-title">№</span>
+            <button class="page-form-people__btn">1</button>
+           </div>
+              <div class="page-form-people__table-line">
+            <label class="page-form-people__table-title" for="people__name">Имя:*</label>
+              <input class="page-form-people__table-field" type="text" name="people__name" id="people__name" placeholder="Введите ваше имя">
+            </div>
+            </div>
+              <div class="page-form-people__table-wrap">
+              <button class="page-form-people__form-btn-delete" name="people__delete">Удалить</button>
+              </div>
+            <div class="page-form-people__table-wrap">
+              <label class="page-form-people__table-title" for="people__nickname">Прозвище</label>
+              <input class="page-form-people__table-field" type="text" name="people__nickname" id="people__nickname" placeholder="Ну как же без этого!">
+          </div>
+          </div>
+
           <table class="page-form-people__table page-form-people__table--none">
             <tr>
               <th class="page-form-people__table-title">№</th>
