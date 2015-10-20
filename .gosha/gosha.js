@@ -9,7 +9,8 @@ module.exports = {
           '*.html',
           'css/**',
           'img/**',
-          'js/**'
+          'js/**',
+          'font/**'
         ],
         dest: 'gosha',
       }]
