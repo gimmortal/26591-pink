@@ -529,6 +529,10 @@
   .page-form-travel {
     margin-bottom: 33px;
 
+    & legend {
+      text-align: center;
+    }
+
     & fieldset {
       padding-bottom: 5px;
     }
@@ -566,6 +570,7 @@
       }
     }
   }
+
 
   .page-form-travel__title--fix {
     position: relative;
@@ -1753,6 +1758,30 @@
       .plus-mixin;
     }
   }
+
+  .page-form-photo__upload {
+    width: 100%;
+    margin-bottom: 43px;
+    .opacity(0.82);
+    color: #fff;
+
+    border: 2px solid @color_serene;
+    background-color: @color_serene;
+    .opacity(0.82);
+
+    &:hover {
+      border: 2px solid @color_serene;
+      background-color: @color_serene;
+      .opacity(1);
+    }
+
+    &:active {
+      border: 2px solid @color_serene;
+      background-color: @color_serene;
+      color:rgba(255, 255, 255, 0.3);
+    }
+  }
+
 
   .page-form-photo__btn {
     width: 100%;
