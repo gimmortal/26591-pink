@@ -14,6 +14,26 @@ module.exports = function(grunt) {
       }
     },
 
+    cmq: {
+      style: {
+        files: {
+          "css/style.css": ["css/style.css"]
+        }
+      }
+    },
+
+    cssmin: {
+      options: {
+        keepSpecialComments: 0,
+        report: "qzip"
+      },
+      style: {
+        files: {
+          "css/style.min.css": ["css/style.css"]
+        }
+      }
+    },
+
     postcss: {
       options: {
         processors: [
@@ -23,6 +43,60 @@ module.exports = function(grunt) {
       style: {
         src: 'css/*.css'
       }
+    },
+
+    csscomb: {
+      style: {
+        expand: true,
+        src: ["less/**/*.less"]
+      }
+    },
+
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expanded: true,
+          src: ["img/**/*.{png,jpg,gif,svg}"]
+        }]
+        }
+      },
+
+    htmlmin: {
+      options: {
+        removeComments: true,
+        collapseWhitespace: true,
+        collapseBooleanAttributes: true,
+        caseSensitive: true,
+        keepClosingSlash: false
+      },
+      html: {
+        files: {
+          "index.min.html": "index.html"
+        }
+      }
+    },
+
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          //cwd: "source",
+          src: [
+            "img/**",
+            "js/**",
+            "font/**",
+            "*.html"
+          ],
+          dest: "build",
+        }]
+      }
+    },
+
+    clean: {
+      build: ["build"]
     },
 
     watch: {
@@ -37,7 +111,18 @@ module.exports = function(grunt) {
     }
   };
 
-  config = require('./.gosha')(grunt, config);
+  grunt.registerTask("build", [
+    "clean",
+    "copy",
+    "less",
+    "cmq",
+    "postcss",
+    "cssmin",
+    "imagemin",
+    "htmlmin"
+  ]);
+
+  //config = require('./.gosha')(grunt, config);
 
   grunt.initConfig(config);
 };
