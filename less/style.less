@@ -27,7 +27,7 @@
 
     outline: none;
 
-    *behavior: url('/assets/templates/js/boxsizing.htc');
+    *behavior: url('boxsizing.htc');
 }
 
 label,
@@ -110,6 +110,14 @@ h3
     .center;
 }
 
+.wrapper-top
+{
+  width: 100%;
+
+  .center;
+}
+
+
 .page-header
 {
     position: relative;
@@ -126,6 +134,11 @@ h3
     {
         height: 236px;
     }
+
+  &--fixblog
+  {
+       height: 196px;
+  }
 
     &-menu
     {
@@ -236,15 +249,14 @@ h3
 
             .hide;
 
-
-
             &-close
             {
                 display: block;
 
                 height: 45px;
                 margin-top: 20px;
-                margin-left: 90%;
+                margin-left: 240px;
+                position: relative;
 
                 fill: #fff;
 
@@ -294,7 +306,7 @@ h3
 
         .center;
 
-        &-other
+         &-other
         {
             line-height: 1.2;
 
@@ -307,6 +319,11 @@ h3
 
             .center;
         }
+
+      &-blog {
+        text-align: center;
+        width: 283px;
+      }
 
         &--size
         {
@@ -2070,19 +2087,17 @@ h3
             .opacity(.3);
         }
     }
-
-    //.page-footer__index {
-    //  .hide;
-    //}
 }
 
 //Блог
 .page-blog
 {
-    margin-top: 40px;
+    margin-top: 31px;
 
     &-reviews
     {
+      margin-bottom: 34px;
+
         &__item
         {
             margin-bottom: 20px;
@@ -2099,9 +2114,9 @@ h3
             {
                 font-family: @bold;
                 font-size: 18px;
-                line-height: 1.7;
+                line-height: 1.6;
 
-                margin-bottom: 10px;
+                margin-bottom: 5px;
 
                 text-align: left;
 
@@ -2113,7 +2128,7 @@ h3
                 font-family: @regular;
                 font-size: 12px;
 
-                margin-bottom: 20px;
+                margin-bottom: 18px;
 
                 text-transform: uppercase;
 
@@ -2141,13 +2156,13 @@ h3
 
             display: inline-block;
 
-            margin-right: 6px;
+            margin-right: 4px;
 
-            .size(60px, 60px);
+            .size(63px, 63px);
 
             &-link
             {
-                line-height: 3;
+                line-height: 3.2;
 
                 display: inline-block;
 
@@ -2157,6 +2172,15 @@ h3
                 border: 2px solid @bg_block;
 
                 .size(100%, 100%);
+
+              &:hover {
+                border: 2px solid @color_serene;
+              }
+
+              &:active {
+                border: 2px solid @color_serene;
+                border: 2px solid rgba(210, 40, 86, 0.5);
+              }
 
                 &--active
                 {
@@ -2174,6 +2198,8 @@ h3
 
     &-reviews
     {
+
+      margin-bottom: 39px;
         &__header
         {
             font-family: @bold;
@@ -2184,10 +2210,15 @@ h3
 
             color: @color_text;
         }
+
+      .hide-data {
+        .hide;
+      }
         &__date
         {
             font-family: @regular;
             font-size: 12px;
+            text-align: center;
 
             margin-bottom: 20px;
 
@@ -2210,14 +2241,14 @@ h3
             border-bottom: 2px solid @bg_block;
         }
 
-        &__description
-        {
+        &__description {
+
             &-title
             {
                 font-family: @bold;
                 font-size: 18px;
 
-                margin-bottom: 25px;
+                margin-bottom: 24px;
 
                 text-align: left;
                 text-transform: uppercase;
@@ -2229,9 +2260,9 @@ h3
             {
                 font-family: @regular;
                 font-size: 14px;
-                line-height: 2;
+                line-height: 1.9;
 
-                margin-bottom: 40px;
+                margin-bottom: 32px;
 
                 color: @color_text;
 
@@ -2247,6 +2278,8 @@ h3
                     list-style: disc;
 
                     color: @color_serene;
+
+                    margin-bottom: -8px;
                 }
 
                 &-item
@@ -2261,7 +2294,7 @@ h3
             }
             &-citate
             {
-                line-height: 2;
+                line-height: 1.9;
 
                 display: block;
 
@@ -2284,7 +2317,7 @@ h3
     }
     &__paginator
     {
-        margin-bottom: 55px;
+        margin-bottom: 42px;
 
         text-align: center;
 
@@ -2296,25 +2329,30 @@ h3
             display: inline-block;
 
             margin-bottom: 20px;
-            padding-right: 20px;
+            margin-right: 15px;
 
             text-transform: uppercase;
 
             .size(100%, 60px);
 
-            &:nth-child(2+1)
+            &:nth-child(2n)
             {
-                padding-right: 0;
+                margin-right: 0;
             }
+
+          &:nth-child(3n)
+          {
+            margin-right: 0;
+          }
 
             &--back
             {
-                .size(137px, 60px);
+                .size(130px, 60px);
             }
 
             &--next
             {
-                .size(137px, 60px);
+                .size(130px, 60px);
             }
 
             &-link
@@ -2329,6 +2367,10 @@ h3
                 border: 2px solid @bg_block;
 
                 .size(100%, 100%);
+
+              &:hover {
+                border-color: @color_text;
+              }
             }
         }
     }

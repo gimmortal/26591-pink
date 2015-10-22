@@ -127,7 +127,7 @@
     </div>
   </div>
   <div class="page-header-menu__popup page-header-menu__popup--show">
-    <a class="page-header-menu__popup-close" href="#">
+    <div class="wrapper"><a class="page-header-menu__popup-close" href="#">
       <svg width="23" height="22" viewBox="0 0 24 23">
         <path d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.413,0.079,21.223,0,21.023,0
 	s-0.39,0.079-0.53,0.22l-8.56,8.56L3.373,0.22c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313c-0.293,0.293-0.293,0.768,0,1.061
@@ -135,14 +135,14 @@
 	c0.199,0,0.39-0.079,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.141,0.331,0.22,0.53,0.22s0.39-0.079,0.53-0.22l2.093-2.094
 	c0.293-0.293,0.293-0.768,0-1.061L15.087,11.933z" />
       </svg>
-    </a>
+    </a></div>
     <nav class="main-nav">
-      <div class="wrapper">
+      <div class="wrapper-top">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a class="main-nav__item-link" href="">Информация</a></li>
-          <li class="main-nav__item"><a class="main-nav__item-link" href="">Блог</a></li>
-          <li class="main-nav__item"><a class="main-nav__item-link" href="">Отзывы</a></li>
-          <li class="main-nav__item"><a class="main-nav__item-link" href="">Конкурс</a></li>
+          <li class="main-nav__item"><a class="main-nav__item-link" href="index.html">Информация</a></li>
+          <li class="main-nav__item"><a class="main-nav__item-link" href="blog.html">Блог</a></li>
+          <li class="main-nav__item"><a class="main-nav__item-link" href="post.html ">Отзывы</a></li>
+          <li class="main-nav__item"><a class="main-nav__item-link" href="form.html">Конкурс</a></li>
         </ul>
       </div>
     </nav>
@@ -419,28 +419,8 @@
 
 </footer>
 
-<script type="text/javascript">
-  var link = document.querySelector('.page-header-menu__open-btn');
-  var popup = document.querySelector('.page-header-menu__popup');
-  var close = popup.querySelector('.page-header-menu__popup-close');
 
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
-    popup.classList.add('page-header-menu__popup--show');
-  }, false);
-
-  close.addEventListener('click', function(event) {
-    event.preventDefault();
-    popup.classList.remove('page-header-menu__popup--show');
-  }, false);
-
-  window.addEventListener('keydown', function(event) {
-    if (event.keyCode == 27 && popup.classList.contains('page-header-menu__popup--show')) {
-      popup.classList.remove('page-header-menu__popup--show');
-    }
-  }, false);
-</script>
-
+<script src="js/script.js" type="text/javascript"></script>
 
 <script type="text/javascript">
   $('.page-main-price__control').click(function(e) {

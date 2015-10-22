@@ -122,7 +122,7 @@ module.exports = function(grunt) {
     "htmlmin"
   ]);
 
-  //config = require('./.gosha')(grunt, config);
+  config = require('./.gosha')(grunt, config);
 
   grunt.initConfig(config);
 };
