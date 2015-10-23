@@ -1954,17 +1954,20 @@
             text-align: center;
             vertical-align: top;
 
-            &:last-child
-            {
-                padding-right: 0;
-            }
-
-            &-center
+           &--center
             {
                 display: block;
-
                 text-align: center;
             }
+
+          &--left {
+            float: left;
+          }
+
+          &--right {
+            padding-right: 0;
+            float: right;
+          }
         }
 
         &__block
