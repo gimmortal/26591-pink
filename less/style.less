@@ -30,6 +30,19 @@
     *behavior: url('boxsizing.htc');
 }
 
+input[type='number'] {
+  font-family: @regular;
+  font-size: 18px;
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  font-family: @regular;
+  font-size: 18px;
+  -webkit-appearance: none;
+}
+
 label,
 button
 {
@@ -988,6 +1001,9 @@ h3
 
             & [type='text']
             {
+
+                font-family: @regular;
+
                 font-size: 18px;
 
                 display: block;
@@ -1180,6 +1196,7 @@ h3
 
             & [type='text']
             {
+                font-family: @regular;
                 font-size: 18px;
 
                 display: block;
@@ -1401,6 +1418,7 @@ h3
 
             & [type='text']
             {
+              font-family: @regular;
                 font-size: 18px;
 
                 display: block;

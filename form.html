@@ -215,10 +215,10 @@
           <h3 class="page-form-travel__title mod">Дата выезда</h3>
           </div>
           <!--<div class="page-form-travel__form">-->
-          <div class="page-form-travel__wrap">
-          <button class="page-form-travel__form-btn"><span class="position-minus">&#8211;</span></button>
-          <input class="page-form-travel__form-field page-form-travel__form-field--modern"  type="text" value="10 дней" name="travel__continuance">
-          <button class="page-form-travel__form-btn"><span class="position-plus">+</span></button>
+          <div class="page-form-travel__wrap page-form-travel__wrap-js">
+          <button type="button" class="page-form-travel__form-btn page-form-travel__form-btn--minus"><span class="position-minus">&#8211;</span></button>
+          <input class="page-form-travel__form-field page-form-travel__form-field--modern"  type="number" min="1" max="999" required value="10" name="travel__continuance">
+          <button type="button" class="page-form-travel__form-btn page-form-travel__form-btn--plus"><span class="position-plus">+</span></button>
           <h3 class="page-form-travel__title">Продолжительность</h3>
           </div>
           <!--</div>-->
@@ -243,15 +243,15 @@
           </legend>
         <div class="page-form-people__form">
           <div class="wrapper-people">
-          <button class="page-form-people__form-btn" name="travel-people__minus"><span class="position-minus">&#8211;</span></button>
+          <button type="button" class="page-form-people__form-btn" name="travel-people__minus"><span class="position-minus">&#8211;</span></button>
           <input class="page-form-people__form-field page-form-people__form-field--modern" type="text" name="travel-people__continuance" value="2 чел">
-          <button class="page-form-people__form-btn clearfix" name="travel-people__plus"><span class="position-plus">+</span></button>
+          <button type="button" class="page-form-people__form-btn clearfix" name="travel-people__plus"><span class="position-plus">+</span></button>
 
           <div class="page-form-people__table">
             <div class="page-form-people__table-wrap line-fix">
            <div class="page-form-people__table-line">
             <span class="page-form-people__table-title">№</span>
-            <button class="page-form-people__btn">1</button>
+            <button class="page-form-people__btn" disabled>1</button>
            </div>
               <div class="page-form-people__table-line">
             <label class="page-form-people__table-title" for="people_name">Имя:*</label>
@@ -270,12 +270,12 @@
             </div>
           </div>
 
-          <div class="page-form-people__table page-form-people__table-null ">
+          <div class="page-form-people__table page-form-people__table-null">
             <div class="wrapper-people">
             <div class="page-form-people__table-wrap line-fix">
               <div class="page-form-people__table-line">
                 <span class="page-form-people__table-title">№</span>
-                <button class="page-form-people__btn">2</button>
+                <button class="page-form-people__btn" disabled>2</button>
               </div>
               <div class="page-form-people__table-line">
                 <label class="page-form-people__table-title" for="people__name2">Имя:*</label>
