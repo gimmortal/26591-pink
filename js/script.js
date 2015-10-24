@@ -32,8 +32,6 @@ for (var i = 0; i < elements.length; i++) {
   initNumberField(elements[i]);
 }
 
-
-
   function initNumberField(parent) {
     var input = parent.querySelector("input");
     var minus = parent.querySelector(".page-form-travel__form-btn--minus");
