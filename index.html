@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pink</title>
-  <script async type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 
@@ -236,21 +235,36 @@
   <div class="page-main-slider-reviews clearfix">
     <div class="wrapper">
       <div class="wrapper-reviews">
-        <article class="page-main-slider-reviews__item ">
+        <div id="owl-pink" class="owl-carousel">
+        <article class="page-main-slider-reviews__item item">
           <h3 class="page-main-slider-reviews__header">Николай Петров</h3>
           <div class="page-main-slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
           <h3 class="page-main-slider-reviews__header--tablet">Николай Петров</h3>
           <span>25 лет, водитель трамвая</span>
         </article>
-        <!--<article class="page-main-slider-reviews__item">...</article>-->
-        <!--<article class="page-main-slider-reviews__item">...</article>-->
-        <ul class="page-main-slider-reviews__controls">
-          <li class="page-main-slider-reviews__control page-main-slider-reviews__control--active"></li>
-          <li class="page-main-slider-reviews__control"></li>
-          <li class="page-main-slider-reviews__control"></li>
-        </ul>
-        <button class="reviews-prev" data-role="none" type="button"></button>
-        <button class="reviews-next" data-role="none" type="button"></button>
+        <article class="page-main-slider-reviews__item item">
+          <h3 class="page-main-slider-reviews__header">Вася Пупкин</h3>
+          <div class="page-main-slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
+          <h3 class="page-main-slider-reviews__header--tablet">Вася Пупкин</h3>
+          <span>25 лет, водитель трамвая</span>
+        </article>
+        <article class="page-main-slider-reviews__item item">
+          <h3 class="page-main-slider-reviews__header">Борис Ельцин</h3>
+          <div class="page-main-slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
+          <h3 class="page-main-slider-reviews__header--tablet">Борис Ельцин</h3>
+          <span>25 лет, водитель трамвая</span>
+        </article>
+        </div>
+
+        <div class="customNavigation">
+         <div class="page-main-slider-reviews__controls">
+          <a class="page-main-slider-reviews__control page-main-slider-reviews__control--active btn next"></a>
+          <a class="page-main-slider-reviews__control btn next"></a>
+          <a class="page-main-slider-reviews__control btn next"></a>
+        </div>
+        <button class="reviews-prev btn prev" data-role="none" type="button"></button>
+        <button class="reviews-next btn next" data-role="none" type="button" ></button>
+        </div>
       </div>
     </div>
   </div>
@@ -303,7 +317,8 @@
     </div>
     <ul class="page-main-price__controls">
       <li class="page-main-price__control "></li>
-      <li class="page-main-price__control page-main-price__control--active"></li>
+      <li class="page-main-price__control "></li>
+     <!--page-main-price__control&#45;&#45;active-->
       <li class="page-main-price__control"></li>
     </ul>
 
@@ -415,10 +430,9 @@
       </div>
     </div>
   </div>
-
 </footer>
-
-
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 <script src="js/script.js" type="text/javascript"></script>
 
 <script type="text/javascript">

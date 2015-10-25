@@ -214,14 +214,16 @@
           <input class="page-form-travel__form-field" type="text" name="travel__date__departure" value="1 апреля 2015">
           <h3 class="page-form-travel__title mod">Дата выезда</h3>
           </div>
-          <!--<div class="page-form-travel__form">-->
-          <div class="page-form-travel__wrap page-form-travel__wrap-js">
-          <button type="button" class="page-form-travel__form-btn page-form-travel__form-btn--minus"><span class="position-minus">&#8211;</span></button>
-          <div class="form-field__case"><input class="page-form-travel__form-field page-form-travel__form-field--modern" type="number" min="1" max="99" required value="10" name="travel__continuance"><span>дней</span></div>
+
+              <div class="page-form-travel__wrap page-form-travel__wrap-js">
+                    <button type="button" class="page-form-travel__form-btn page-form-travel__form-btn--minus"><span class="position-minus">&#8211;</span></button>
+            <input class="page-form-travel__form-field page-form-travel__form-field--modern" type="text" min="1" max="99" required value="10 дней" name="travel__continuance">
+
           <button type="button" class="page-form-travel__form-btn page-form-travel__form-btn--plus"><span class="position-plus">+</span></button>
-          <h3 class="page-form-travel__title">Продолжительность</h3>
+
+            <h3 class="page-form-travel__title">Продолжительность</h3>
           </div>
-          <!--</div>-->
+
 
           <div class="page-form-travel__wrap">
 
@@ -243,10 +245,11 @@
           </legend>
         <div class="page-form-people__form">
           <div class="wrapper-people">
-          <button type="button" class="page-form-people__form-btn" name="travel-people__minus"><span class="position-minus">&#8211;</span></button>
-            <div class="form-field__case"><input class="page-form-people__form-field page-form-people__form-field--modern" type="number" name="travel-people__continuance" value="2"><span>чел</span></div>
-          <button type="button" class="page-form-people__form-btn clearfix" name="travel-people__plus"><span class="position-plus">+</span></button>
-
+          <div class="page-form-travel__wrap-js2">
+            <button type="button" class="page-form-people__form-btn page-form-people__form-btn--minus" name="travel-people__minus"><span class="position-minus">&#8211;</span></button>
+            <input class="page-form-people__form-field page-form-people__form-field--modern" type="text" name="travel-people__continuance" value="2 чел">
+          <button type="button" class="page-form-people__form-btn page-form-people__form-btn--plus clearfix" name="travel-people__plus"><span class="position-plus">+</span></button>
+          </div>
           <div class="page-form-people__table">
             <div class="page-form-people__table-wrap line-fix">
            <div class="page-form-people__table-line">
