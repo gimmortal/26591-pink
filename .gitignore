@@ -6,4 +6,5 @@ prepros.cfg
 *.sublime*
 *.map
 .idea/
-css/style.css
+css/*.css
+source/css/*.css
