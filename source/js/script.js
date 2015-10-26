@@ -28,6 +28,15 @@ $(document).ready(function() {
   })
 });
 
+
+$('.page-main-price__control').click(function(e) {
+  var index = $('.page-main-price__control').index(this);
+  $('.page-main-price__control').removeClass('.page-main-price__control--active');
+  $(this).addClass('.page-main-price__control--active');
+  $('.page-main-price__table')
+    .css('margin-left', -(index * $('.page-main-price__table td').width()));
+});
+
 var link = document.querySelector('.page-header-menu__open-btn');
 var popup = document.querySelector('.page-header-menu__popup');
 var close = popup.querySelector('.page-header-menu__popup-close');
