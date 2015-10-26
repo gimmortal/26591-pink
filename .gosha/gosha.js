@@ -6,11 +6,11 @@ module.exports = {
       files: [{
         expand: true,
         src: [
-          '*.html',
-          'css/**',
-          'img/**',
-          'js/**',
-          'font/**'
+          'source/*.html',
+          'source/css/**',
+          'source/img/**',
+          'source/js/**',
+          'source/font/**'
         ],
         dest: 'gosha',
       }]
