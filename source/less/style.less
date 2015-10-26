@@ -755,6 +755,7 @@ h3
 
   &-price
   {
+
     position: relative;
 
     margin-top: 20px;
@@ -765,6 +766,9 @@ h3
 
     &__wrap
     {
+      .center;
+      overflow: hidden;
+      width: 320px;
       display: block;
     }
 
@@ -787,7 +791,7 @@ h3
 
     &__table
     {
-      overflow: hidden;
+     overflow: hidden;
 
       margin-bottom: 30px;
 
@@ -798,6 +802,10 @@ h3
       background-color: @color_white;
 
       .center;
+
+      & td {
+        width: 280px;
+      }
 
       &-header
       {
