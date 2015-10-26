@@ -18,6 +18,7 @@ window.addEventListener('keydown', function(event) {
   }
 }, false);
 
+//Кнопки
 function removePreview(num) {
   queue = queue.filter(function (element) {
     return element.num != num;
@@ -57,35 +58,38 @@ for (var i = 0; i < elements.length; i++) {
     }
   }
 
+//Форма
 
-$(document).ready(function() {
+(function() {
+  if(!('FormData' in window)) {
+    return;
+  }
 
-  var owl = $("#owl-pink");
+  var form = document.querySelector('.page-form-all');
 
-  owl.owlCarousel({
-    items : 3, //10 items above 1000px browser width
-    itemsDesktop : [1000,5], //5 items between 1000px and 901px
-    //navigationText: false,
-    pagination: false,
-    navigation: false, // Show next and prev buttons
-    slideSpeed: 300,
-    paginationSpeed: 400,
-    singleItem: true
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
+    var data = new FormData(form);
+
+    request(data, function(response) {
+      console.log(response);
+    });
   });
 
-  $(".next").click(function(){
-    owl.trigger('owl.next');
-  })
-  $(".prev").click(function(){
-    owl.trigger('owl.prev');
-  })
-  $(".play").click(function(){
-    owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
-  })
-  $(".stop").click(function(){
-    owl.trigger('owl.stop');
-  })
+  function request(data, fn) {
+    var xhlh = new XMLHttpRequest();
+    var time = (new Date()).getTime();
 
-});
+    xhlh.open('post', 'https://echo.htmlacademy.ru/adaptive?' + time);
 
+    xhlh.addEventListener('readystatechange', function() {
+      if(xhlh.readyState == 4) {
+        fn(xhlh.responseText);
+      }
+    });
+
+    xhlh.send(data);
+
+  }
+})();
