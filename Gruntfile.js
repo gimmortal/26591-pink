@@ -85,6 +85,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: "source",
           src: [
+            "css/**",
             "img/**",
             "js/**",
             "font/**",
