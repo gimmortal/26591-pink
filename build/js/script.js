@@ -58,8 +58,6 @@ window.addEventListener('keydown', function(event) {
 
 
 
-
-
 (function() {
   var plus = document.querySelector(".page-form-travel__form-btn--plus");
   var minus = document.querySelector(".page-form-travel__form-btn--minus");
@@ -109,8 +107,6 @@ window.addEventListener('keydown', function(event) {
     }
   }
 })();
-
-
 
 
 //Travellers field controls
@@ -176,17 +172,36 @@ window.addEventListener('keydown', function(event) {
     return;
   }
 
+  //var form = document.querySelector('.page-form-all');
+  //
+  //form.addEventListener('submit', function(event) {
+  //  event.preventDefault();
+  //
+  //  var data = new FormData(form);
+  //
+  //  request(data, function(response) {
+  //    console.log(response);
+  //  });
+  //});
+
+
   var form = document.querySelector('.page-form-all');
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
+  if (form && form.addEventListener) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
 
-    var data = new FormData(form);
+      var data = new FormData(form);
 
-    request(data, function(response) {
-      console.log(response);
+      request(data, function (response) {
+        console.log(response);
+      });
     });
-  });
+  }
+
+
+
+
 
   function request(data, fn) {
     var xhlh = new XMLHttpRequest();
@@ -199,9 +214,8 @@ window.addEventListener('keydown', function(event) {
         fn(xhlh.responseText);
       }
     });
-
     xhlh.send(data);
-
   }
 })();
+
 
