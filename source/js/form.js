@@ -48,6 +48,66 @@
   }
 })();
 
+
+
+
+//Travellers field controls
+(function() {
+  var moarCompanions = document.querySelector(".page-form-people__form-btn--plus");
+  var lessCompanions = document.querySelector(".page-form-people__form-btn--minus");
+  var companions = document.querySelector("input[name='travel-people__continuance']");
+  var humans = "чел.";
+
+  if (moarCompanions) {
+    moarCompanions.addEventListener("click", function(event) {
+      event.preventDefault;
+      var companionsCount = parseInt(companions.value, 5);
+      companionsCount++;
+      if (companionsCount > 5) {
+        companionsCount = 5;
+        confirm("Регистрация только не более 5 человек");
+      }
+      companions.value = companionsCount + " " + humans;
+
+      var travellersTable = document.querySelector("#travellers-table").innerHTML;
+      var tableHolder = document.querySelector("#table-holder");
+      tableHolder.innerHTML += travellersTable;
+      var number = document.querySelectorAll(".page-form-people__btn");
+      var ordinal = 1;
+      for(i = 0; i < number.length; i++) {
+        number[i].innerHTML = ordinal++;
+      }
+    });
+  }
+
+  if (lessCompanions) {
+    lessCompanions.addEventListener("click", function(event) {
+      event.preventDefault;
+      var companionsCount = parseInt(companions.value, 5);
+      companionsCount--;
+      if (companionsCount < 0) {
+        companionsCount = 0;
+      }
+      companions.value = companionsCount + " " + humans;
+
+      var travellersTable = document.querySelector("#travellers-table").innerHTML;
+      var tableHolder = document.querySelector("#table-holder");
+      var lastTable = document.querySelector(".people-table:last-of-type");
+      if (lastTable) {
+        tableHolder.removeChild(lastTable);
+      }
+    });
+  }
+
+  var deleteTable = document.querySelector(".page-form-people__form-btn-delete");
+  if (deleteTable) {
+    deleteTable.addEventListener("click", function(event) {
+      event.preventDefault;
+      var table = document.querySelector(".travellers");
+      deleteTable.parentNode.parentNode.parentNode.parentNode.parentNode.removeChild(table);
+    });
+  }
+})();
 //Форма
 
 (function(formpost) {

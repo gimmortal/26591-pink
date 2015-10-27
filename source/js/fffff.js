@@ -93,7 +93,6 @@
         number[i].innerHTML = ordinal++;
       }
 
-
     });
   }
 
