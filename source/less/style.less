@@ -131,12 +131,18 @@ h3
   background-position: 50% 0;
   background-size: cover;
 
-  .img-retina('@{dir}/background-mobile@1x.jpg';'@{dir}/background-mobile@2x.jpg';'@{dir}/background-mobile@3x.jpg'; auto; 100%);
+  .img-retina('@{dir}/background-mobile@1x.jpg';'@{dir}/background-mobile@2x.jpg 2x';'@{dir}/background-mobile@3x.jpg 3x'; auto; 100%);
 
   &--fix
   {
-    height: 236px;
+    height: 195px;
   }
+
+  &--fixform
+  {
+    height: 233px;
+  }
+
 
   &--fixblog
   {
@@ -705,7 +711,7 @@ h3
     {
       line-height: 2.1;
 
-      padding-bottom: 30px;
+      padding-bottom: 18px;
 
       text-align: center;
     }
@@ -715,33 +721,6 @@ h3
       text-align: center;
     }
 
-    &__control
-    {
-      display: inline-block;
-
-      margin-right: 10px;
-
-      cursor: pointer;
-
-      border: 3px solid @color_white;
-      background-color: #b5b9be;
-
-      .size(11px, 11px);
-      .rounded(100%);
-
-      &--active
-      {
-        border: 3px solid #283645;
-        background-color: @color_white;
-
-        .size(12px, 12px);
-      }
-
-      &:last-child
-      {
-        margin-right: 0;
-      }
-    }
   }
   .reviews-prev
   {
@@ -1034,7 +1013,7 @@ h3
 
   &-apptravel
   {
-    margin-bottom: 48px;
+    margin-bottom: 38px;
     padding-top: 36px;
 
     background-color: @bg_block;
@@ -1531,7 +1510,7 @@ h3
       &-field
       {
         margin-top: 8px;
-        padding-right: 25px;
+        padding-right: 20px;
         padding-left: 25px;
 
         border: 2px solid #e5e5e5;
@@ -1654,7 +1633,7 @@ h3
       {
         position: relative;
         left: -23px;
-
+        letter-spacing: -0.3px;
         display: block;
 
         padding-bottom: 35px;
@@ -1666,7 +1645,7 @@ h3
   {
     &__wrap
     {
-      margin-bottom: 56px;
+      margin-bottom: 49px;
       padding-top: 33px;
 
       background-color: @bg_block;
@@ -1674,6 +1653,7 @@ h3
 
     &__title
     {
+      display: block;
       font-family: @regular;
       font-size: 14px;
 
@@ -2246,9 +2226,10 @@ h3
       color: @color_text;
     }
 
-    .hide-data {
+    .hide-date {
       .hide;
     }
+
     &__date
     {
       font-family: @regular;
@@ -2308,9 +2289,7 @@ h3
 
         &-list
         {
-          padding-left: 20px;
-
-          list-style: disc;
+          padding-left:15px;
 
           color: @color_serene;
 
@@ -2318,7 +2297,10 @@ h3
         }
 
         &-item
+
         {
+          padding-left: 5px;
+          list-style-type: disc;
           margin-bottom: 35px;
 
           & span
@@ -2527,21 +2509,23 @@ h3
 }
 .owl-theme .owl-controls .owl-page span{
   display: block;
-  width: 12px;
-  height: 12px;
+  .size(11px, 11px);
   margin: 5px 7px;
-  filter: Alpha(Opacity=50);/*IE7 fix*/
-  opacity: 0.5;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  background: #869791;
-}
+  border: 3px solid @color_white;
+  background-color: #b5b9be;
+  .rounded(100%);
+
+ }
 
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span{
-  filter: Alpha(Opacity=100);/*IE7 fix*/
-  opacity: 1;
+  background-color: #7e868f;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:active span{
+  border: 3px solid #283645;
+  background-color: @color_white;
 }
 
 /* If PaginationNumbers is true */

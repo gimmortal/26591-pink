@@ -17,6 +17,12 @@
         background-size: cover;
 
         .img-retina('@{dir}/background-tablet@1x.jpg';'@{dir}/background-tablet@2x.jpg';'@{dir}/background-tablet@2x.jpg'; auto; 100%);
+
+
+      &--fixform
+      {
+        height: 443px;
+      }
     }
     .hide-mobile
     {
@@ -280,6 +286,10 @@
         &__header-title
         {
             margin-top: 35px;
+
+          & span {
+            display: block;
+          }
         }
     }
 
@@ -329,6 +339,10 @@
         padding-bottom: 15px;
 
         .center;
+
+      &__controls {
+        margin-bottom: 24px;
+      }
 
         &__control
         {
@@ -645,7 +659,7 @@
 
     .page-form-apptravel
     {
-        margin-bottom: 62px;
+        margin-bottom: 67px;
         padding-top: 20px;
         //border: 2px solid @bg_block;
 
@@ -773,7 +787,7 @@
     .page-form-people
     {
         margin-bottom: 5px;
-        padding-bottom: 51px;
+        padding-bottom: 56px;
 
         background: none;
 
@@ -943,7 +957,8 @@
 
     .page-form-photo
     {
-        & hr
+
+       & hr
         {
             margin-bottom: 30px;
         }
@@ -1020,6 +1035,9 @@
             .plus-mixin;
         }
     }
+  .page-form-photo__upload {
+    margin-bottom: 43px;
+  }
 
     .page-form-photo__btn
     {
@@ -1262,6 +1280,11 @@
         background-size: cover;
 
         .img-retina('@{dir}/background-tablet@1x.jpg';'@{dir}/background-tablet@2x.jpg';'@{dir}/background-tablet@2x.jpg'; auto; 100%);
+
+      &--fixform
+      {
+        height: 396px;
+      }
     }
 
     .hide-mobile
@@ -2268,7 +2291,7 @@
 
     .page-form-people
     {
-        margin-bottom: 43px;
+        margin-bottom: 48px;
 
         background: none;
 
@@ -2827,4 +2850,12 @@
     }
 
   }
+
+  .owl-theme .owl-controls.clickable .owl-buttons div {
+    .hide;
+  }
+  .owl-theme .owl-controls .owl-page {
+    .hide;
+  }
+
 }

@@ -1,42 +1,52 @@
+(function() {
+  var plus = document.querySelector(".page-form-travel__form-btn--plus");
+  var minus = document.querySelector(".page-form-travel__form-btn--minus");
+  var periods = document.querySelector("#travel-date");
 
-function removePreview(num) {
-  queue = queue.filter(function (element) {
-    return element.num != num;
-  });
-  num.parentNode.removeChild(num);
-}
-var elements = document.querySelectorAll(".page-form-travel__wrap-js");
-for (var i = 0; i < elements.length; i++) {
-  initNumberField(elements[i]);
-}
+  if (plus) {
+    plus.addEventListener("click", function(event) {
+      var daysCount = parseInt(periods.value, 10);
+      event.preventDefault;
+      daysCount++;
+      if (daysCount > 366) {
+        daysCount = 366;
+      }
+      periods.value = daysCount + " " + days(daysCount);
+    });
+  }
 
-function initNumberField(parent) {
-  var input = parent.querySelector("input");
-  var minus = parent.querySelector(".page-form-travel__form-btn--minus");
-  var plus = parent.querySelector(".page-form-travel__form-btn--plus");
+  if (minus) {
+    minus.addEventListener("click", function(event) {
+      event.preventDefault;
+      var daysCount = parseInt(periods.value, 10);
+      daysCount--;
+      if(daysCount < 0) {
+        daysCount = 0;
+      }
+      periods.value = daysCount + " " + days(daysCount);
+    });
+  }
 
-  minus.addEventListener("click", function (c) {
-    c.preventDefault();
-    changeNumber(false);
-  });
-
-  plus.addEventListener("click", function (c) {
-    c.preventDefault();
-    changeNumber(true);
-  });
-
-  function changeNumber(operation) {
-    var value = Number(input.value);
-    if (isNaN(value)) {
-      value = 0;
+  function days(daysCount) {
+    if ((daysCount > 10) && (daysCount <= 20)) {
+      return("дней");
     }
-    if (operation) {
-      input.value = value + 1;
-    } else {
-      input.value = value - 1;
+    var strCounter = String(daysCount);
+    var lastDigit = strCounter[strCounter.length-1];
+    switch (lastDigit) {
+      case "1":
+        return("день");
+        break;
+      case "2":
+      case "3":
+      case "4":
+        return("дня");
+        break;
+      default:
+        return("дней");
     }
   }
-}
+})();
 
 //Форма
 

@@ -6,7 +6,7 @@ $(document).ready(function() {
     items : 3, //10 items above 1000px browser width
     itemsDesktop : [1000,5], //5 items between 1000px and 901px
     //navigationText: false,
-    pagination: false,
+    pagination: true,
     navigation: false, // Show next and prev buttons
     slideSpeed: 300,
     paginationSpeed: 400,
